@@ -1,30 +1,40 @@
 <?php
-session_start();
-
-// connect to database
-$db = mysqli_connect("localhost", "root","","authentication");
-
-    if (isset($_POST['register_btn'])){
-        session_start();
-        $username = mysqli_real_escape_string($_POST['username']);
-        $email = mysqli_real_escape_string($_POST['email']);
-        $password = mysqli_real_escape_string($_POST['password']);
-        $password2 = mysqli_real_escape_string($_POST['password2']);
-
-        if ($password == $password2){
-            // create user
-            $password = md5 ($password); // hash password before storing for security purposes
-            $sql = "INSERT INTO users (username, email, password) VALUES ('$username', '$email, '$password')";
-            mysql_query($db,$sql);
-            $_SESSION ['message']="You are now logged in";
-            $_SESSION['username']= $username;
-            header("location: home.php"); //redirect to home page
-        } else {
-            $_SESSION ['message']="The two passwords do not match";
-        }
-    }
-
+$pdo=new PDO('mysql:: host=mars.iuk.hdm-stuttgart.de; 
+ dbname=datenbankname', 'datenbanklogin', 'datenbankpasswort',
+    array('charset'=>'utf8'));
 ?>
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <title>Beispiel</title>
+</head>
+<body>
+<h1>Namensliste</h1>
+<h2>Liste</h2>
+<?php
+$statement = $pdo->prepare('SELECT * FROM users');
+if($statement->execute()) {
+    while($row=$statement->fetch()) {
+        echo $row['id'].' '.$row['vorname'].' '.$row['name']."<br>";
+    }
+} else {
+    echo 'Datenbank-Fehler:';
+    echo $statement->errorInfo()[2];
+    echo $statement->queryString;
+    die();
+}
+?>
+
+
+<h2>Neuen Namen eintragen</h2>
+<form action="eintragen.php" method="post">
+    Vorname: <input type="text" name="vorname">
+    Nachname:<input type="text" name="name">
+    <input type="submit">
+</form>
+</body>
+</html>
 
 <!DOCTYPE html>
 <html lang="en">
