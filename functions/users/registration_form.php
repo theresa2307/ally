@@ -1,4 +1,3 @@
-
 <?php
 $pdo=new PDO('mysql:: host=mars.iuk.hdm-stuttgart.de; 
  dbname=u-ts175', 'ts175', 'ohngoow2Oo',
@@ -8,9 +7,6 @@ $pdo=new PDO('mysql:: host=mars.iuk.hdm-stuttgart.de;
 <!doctype html>
 <html lang="de">
 <head>
-    <<link rel="stylesheet" type="text/css" href="style_regestrierung.css" />
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
 
     <meta charset="utf-8">
 </head>
@@ -35,7 +31,7 @@ if($statement->execute()) {
 <div id="loginbox">
     <div id="loginheader">ally</div>
     <div id="login">
-        <form action="eintragen.php" method="post" id="formular">
+        <form action="./functions/users/registration_do.php" method="post" id="formular">
             <div id="ueberschrift">Registrierung</div>
             <div id="linie_anfang"></div>
             <input type="text" id="email" name="email" placeholder="Email" style="text-align: left; line-height: 0px; padding-left: 10px;"><br>

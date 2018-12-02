@@ -1,11 +1,10 @@
-<?php
-$pdo=new PDO('mysql:: host=mars.iuk.hdm-stuttgart.de; 
- dbname=u-ts175', 'ts175', 'ohngoow2Oo',
-    array('charset'=>'utf8'));
-?>
 <!doctype html>
 <html lang="de">
 <head>
+    <<link rel="stylesheet" type="text/css" href="./style/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+
     <meta charset="utf-8">
     <title>Beispiel</title>
 </head>
@@ -15,6 +14,7 @@ $pdo=new PDO('mysql:: host=mars.iuk.hdm-stuttgart.de;
 <?php
 session_start();
 include "database.php";
+$pdo=new PDO ($host, $user, $password);
 $statement = $pdo->prepare('SELECT * FROM users');
 if($statement->execute()) {
     while($row=$statement->fetch()) {
@@ -26,13 +26,9 @@ if($statement->execute()) {
     echo $statement->queryString;
     die();
 }
+echo $_SESSION['username'];
 ?>
-<h2>Neuen Namen eintragen</h2>
-<form action="eintragen.php" method="post">
-    Vorname: <input type="text" name="vorname">
-    Nachname:<input type="text" name="name">
-    <input type="submit">
-</form>
+
 </body>
 </html>
 
@@ -42,5 +38,25 @@ if($statement->execute()) {
     Nachname:<input type="text" name="name">
     <input type="submit">
 </form>
+<ul>
+    <li>
+        <a href="index.php">home</a>
+        <a href="?page=users&action=login">login</a>
+        <a href="?page=users&action=registrierung">registrierung</a>
+        <a href="?page=posts&action=create">Post erstellen</a>
+    </li>
+</ul>
+<?php
+switch ($_GET["page"]){
+    case"users":
+        include "./functions/users/index.php";
+        break;
+    case"posts":
+        include "./functions/posts/index.php";
+        break;
+    default:
+        include"./functions/posts/view.php";
+}
+?>
 </body>
 </html>

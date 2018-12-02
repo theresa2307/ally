@@ -1,7 +1,6 @@
 <?php
-$pdo=new PDO('mysql:: host=mars.iuk.hdm-stuttgart.de; 
- dbname=u-ts175', 'ts175', 'ohngoow2Oo',
-    array('charset'=>'utf8'));
+include('../../database.php');
+$pdo=new PDO ($host, $user, $password);
 ?>
 <!doctype html>
 <html lang="de">
@@ -11,13 +10,14 @@ $pdo=new PDO('mysql:: host=mars.iuk.hdm-stuttgart.de;
 </head>
 <body>
 <?php
-
+$password =$_POST["password"];
+$password_hash = password_hash($password, PASSWORD_DEFAULT); //funktion, die zufallhash generiert
 $statement = $pdo->prepare("INSERT INTO users (email, username, password, password2) 
                 VALUES (:email, :username, :password, :password2)");
 
 $statement->bindParam(':email', $_POST["email"]);
 $statement->bindParam(':username', $_POST["username"]);
-$statement->bindParam(':password', $_POST["password"]);
+$statement->bindParam(':password', $password_hash); //läd nicht das password hoch
 $statement->bindParam(':password2', $_POST["password2"]);
 if($statement->execute()){
     echo 'id in der Datenbank: '.$id=$pdo->lastInsertId();
@@ -30,6 +30,6 @@ if($statement->execute()){
 
 ?>
 <br>
-<a href="index.php">Zurück zur Startseite</a>
+<a href="../../index.php">Zurück zur Startseite</a>
 </body>
 </html>
