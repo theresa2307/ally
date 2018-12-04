@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="de">
 <head>
-    <<link rel="stylesheet" type="text/css" href="./style/style.css" />
+    <link rel="stylesheet" type="text/css" href="./style/style_login.css" />
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
 
@@ -33,16 +33,16 @@ echo $_SESSION['username'];
 </html>
 
 <h2>Neuen Namen eintragen</h2>
-<form action="registrierung.html" method="post">
+<form action="./style/registrierung.html" method="post">
     Vorname: <input type="text" name="vorname">
     Nachname:<input type="text" name="name">
     <input type="submit">
 </form>
 <ul>
     <li>
-        <a href="index.php">home</a>
-        <a href="?page=users&action=login">login</a>
-        <a href="?page=users&action=registrierung">registrierung</a>
+        <a href="index.php">Home</a>
+        <a href="?page=users&action=login">Login</a>
+        <a href="?page=users&action=registrierung">Registrierung</a>
         <a href="?page=posts&action=create">Post erstellen</a>
     </li>
 </ul>
