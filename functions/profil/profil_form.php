@@ -1,7 +1,13 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: theresa
- * Date: 03.12.18
- * Time: 12:13
- */
+?>
+
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+
+</head>
+<body>
+
+</body>
+</html>

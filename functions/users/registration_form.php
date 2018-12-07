@@ -9,6 +9,8 @@ $pdo=new PDO('mysql:: host=mars.iuk.hdm-stuttgart.de;
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="../../style/style_registration.css" media="screen" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
 </head>
 <body>
 
