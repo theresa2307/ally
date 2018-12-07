@@ -17,6 +17,6 @@ $user2=$statement->fetch(); // auslesen aus der DB und speichern in der variable
 
 <html>
 <body>
-<div><a href="logout.php">Logout</a></div>
+<div><a href="logout.php">logout</a></div>
 </body>
 </html>
