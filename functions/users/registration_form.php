@@ -40,7 +40,7 @@ if($statement->execute()) {
             <input type="text" id="username" name="username" placeholder="Username" style="text-align: left; line-height: 0px;"><br>
             <input type="password" id="passwort" name="password" placeholder="Passwort" style="text-align: left; line-height: 0px;"><br>
             <input type="password" id="passwort_wiederholen" name="password2" placeholder="Passwort wiederholen" style="text-align: left; line-height: 0px;"><br>
-            <button type="submit" class="button">Ragistrieren</button>
+            <button type="submit" class="button">Readsdgistrieren</button>
             <div id="linie_ende"></div>
             </form>
     </div>
