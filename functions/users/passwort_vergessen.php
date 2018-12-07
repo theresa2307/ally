@@ -12,7 +12,7 @@
 <div id="loginbox">
     <div id="loginheader">ally</div>
     <div id="login">
-        <form id="formular" action="passwort_vergessen_do.php" method="post">
+        <form id="formular" action="passwort_vergessen_do_daniel.php" method="post">
             <div id="ueberschrift">Passwort vergessen</div>
             <div id="linie_anfang"></div>
             <input type="text" id="email" name="email" placeholder="Email"><br>
