@@ -3,7 +3,7 @@ session_start();
 include ('../../database.php');
 $pdo= new PDO($host, $user, $password);
 $username= $_POST['username'];
-$password=$_POST['passwort'];
+$passwort=$_POST['passwort'];
 $statement= $pdo->prepare("SELECT * FROM users WHERE username=:username"); //vorbereitet
 $statement->execute(array('username'=> $username));
 $user2=$statement->fetch(); // auslesen aus der DB und speichern in der variable user
