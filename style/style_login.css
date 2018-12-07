@@ -1,0 +1,216 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	widht:100%;
+	height:100%;
+	background-image: 
+    linear-gradient(hsla(215,30%,70%,0.9) 0%, hsla(215,30%,70%,0) 50%, hsla(215,30%,70%,0.9) 100%), 
+    linear-gradient(to right, hsla(215,30%,80%,0.8) 30%, white 50%, hsla(215,30%,80%,0.8) 70%);
+
+
+	padding: 0;
+	margin: 0;
+}
+
+#loginbox{
+	width:25%;
+	min-width:320px;
+	height:380px;
+	margin-top:10%;
+	margin-left: auto;
+	margin-right:auto;
+}
+
+#loginheader{
+	width:100%;
+	height:90px;
+	background-color:#222222;
+	font-family: 'Pacifico', cursive;
+	font-size:50px;
+	color: #FFFFFF;
+	text-align: center;
+	line-height: 78px;
+	margin-bottom: 0px;
+	border-top-right-radius: 40px;
+	border-top-left-radius:40px;
+	
+}
+
+#login{
+	width:100%;
+	height:280px;
+	background:url(../pics/hintergrund_30_p.png);
+}
+#ueberschrift{
+	height:30px;
+	width:100%;
+	padding-top: 20px;
+	padding-left: 10%;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+	color: #E2E2E2;
+}
+
+#linie_anfang {
+	height:2px;
+	width:90%;
+	background-color: #E2E2E2;
+	margin-left: auto;
+	margin-right:auto;
+}
+
+#formular{
+	width:100%;
+}
+
+#username{
+	height:35px;
+	width:80%;
+	margin-top:15px;
+	margin-left:10%;
+	margin-right:10%;
+	background-color:#FFF;
+	top:40px;
+	color:#000;
+}
+
+#passwort{
+	height:35px;
+	width:80%;
+	margin-top:10px;
+	margin-left:10%;
+	margin-right:10%;
+	background-color:#FFF;
+	top:50px;
+}
+
+input::placeholder {
+  padding:10px;
+}
+label {
+  padding:10px;
+}
+
+#login_merken{
+	height:20px;
+	margin-left: 10%;
+	margin-top:18px;
+	text-align: left;
+	float: left;
+}
+
+#login_merken_text{
+	height:20px;
+	width: 28%;
+	margin-left: 0%;
+	margin-top:18px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 12px;
+	color:#E2E2E2;
+	text-align: left;
+	line-height: 20px;
+	float:left;
+}
+#passwort_vergessen{
+	height:20px;
+	width:40%;
+	margin-top:18px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 12px;
+	text-decoration: none;
+	color:#E2E2E2;
+	line-height: 20px;
+	padding-right:10%;
+	text-align: right !important;
+	float: right;
+}
+
+
+.button{
+	height:35px;
+	width:81%;
+	margin-top:15px;
+	margin-left:10%;
+	margin-right:10%;
+	background-color: #244A76;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 12px;
+	color:#E2E2E2;
+	border: none;
+}
+
+#linie_ende {
+	height:2px;
+	width:90%;
+	background-color: #E2E2E2;
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right:auto;
+}
+
+#loginfooter{
+	width:100%;
+	height:60px;
+	background-color:#222222;
+	border-bottom-left-radius: 40px;
+	border-bottom-right-radius: 40px;
+}
+
+#loginfooter_text {
+	width:45%;
+	height:60px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 12px;
+	color: #E2E2E2;
+	text-align: left;
+	line-height: 60px;
+	padding-left:5%;
+	float:left;	
+}
+
+#loginfooter_button {
+	width:45%;
+	height:60px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 12px;
+	color: #E2E2E2;
+	text-align: right;
+	line-height: 60px;
+	padding-right:5%;
+	float:left;
+}
+
+#button_regestrieren{
+	width:60%;
+	height:25px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 12px;
+	color: #E2E2E2;
+	background-color: #00AE25;
+	border:none;
+	border-radius: 3px;
+}
+
+#passwort_wiederholen{
+	height:35px;
+	width:80%;
+	margin-top:10px;
+	margin-left:10%;
+	margin-right:10%;
+	background-color:#FFF;
+	top:50px;
+}
+
+#email{
+	height:35px;
+	width:80%;
+	margin-top:15px;
+	margin-left:10%;
+	margin-right:10%;
+	background-color:#FFF;
+	top:40px;
+	color:#000;
+}
+

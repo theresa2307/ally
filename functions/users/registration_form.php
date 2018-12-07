@@ -7,14 +7,16 @@ $pdo=new PDO('mysql:: host=mars.iuk.hdm-stuttgart.de;
 <!doctype html>
 <html lang="de">
 <head>
-
     <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../../style/style_registration.css" media="screen" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
 </head>
 <body>
 
 <?php
 session_start();
-include "database.php";
+include "../../database.php";
 $statement = $pdo->prepare('SELECT * FROM users');
 if($statement->execute()) {
     while($row=$statement->fetch()) {
@@ -31,7 +33,7 @@ if($statement->execute()) {
 <div id="loginbox">
     <div id="loginheader">ally</div>
     <div id="login">
-        <form action="./functions/users/registration_do.php" method="post" id="formular">
+        <form action="registration_do.php" method="post" id="formular">
             <div id="ueberschrift">Registrierung</div>
             <div id="linie_anfang"></div>
             <input type="text" id="email" name="email" placeholder="Email" style="text-align: left; line-height: 0px; padding-left: 10px;"><br>
@@ -47,7 +49,7 @@ if($statement->execute()) {
             Schon einen Account?
         </div>
         <div id="loginfooter_button">
-            <input type="button" id="button_login" value="Login" onclick="window.location.href='login.html'" />
+            <input type="button" id="button_login" value="Login" onclick="window.location.href='login_form.php'" />
         </div>
     </div>
 </div>

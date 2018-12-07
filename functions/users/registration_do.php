@@ -30,6 +30,6 @@ if($statement->execute()){
 
 ?>
 <br>
-<a href="../../index.php">Zurück zur Startseite</a>
+<a href="../../index.php">zurück zur Startseite</a>
 </body>
 </html>
