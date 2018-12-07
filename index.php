@@ -33,7 +33,7 @@ echo $_SESSION['username'];
 </html>
 
 <h2>Neuen Namen eintragen</h2>
-<form action="./style/registrierung.html" method="post">
+<form action="./functions/users/registration_do.php" method="post">
     Vorname: <input type="text" name="vorname">
     Nachname:<input type="text" name="name">
     <input type="submit">

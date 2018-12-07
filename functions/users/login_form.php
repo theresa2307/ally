@@ -19,7 +19,7 @@
             <input type="password" id="passwort" name="passwort" placeholder="Passwort"><br>
             <input type="checkbox" id="login_merken" name="merken" value="merken">
             <div id="login_merken_text">Login merken</div>
-            <a href="../../style/passwort_vergessen.html" id="passwort_vergessen">Passwort vergessen</a>
+            <a href="passwort_vergessen.php" id="passwort_vergessen">Passwort vergessen</a>
             <button class="button">Anmelden</button>
             <div id="linie_ende"></div>
         </form>
@@ -29,7 +29,7 @@
             Noch keinen Account?
         </div>
         <div id="loginfooter_button">
-            <input type="button" id="button_regestrieren" value="Regestrieren" onclick="window.location.href='registrierung.html'" />
+            <input type="button" id="button_regestrieren" value="Regestrieren" onclick="window.location.href='registration_form.php'" />
         </div>
     </div>
 </div>
