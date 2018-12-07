@@ -29,7 +29,7 @@
             Noch keinen Account?
         </div>
         <div id="loginfooter_button">
-            <input type="button" id="button_regestrieren" value="Regestrieren" onclick="window.location.href='registration_form.php'" />
+            <input type="button" id="button_registrieren" value="Registrieren" onclick="window.location.href='registration_form.php'" />
         </div>
     </div>
 </div>
