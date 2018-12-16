@@ -1,8 +1,6 @@
 <?php
-
-
-
-// Bild, Über mich, Button
-
-
+include_once ("");
+include_once ("");
+include_once ("");
 ?>
+
