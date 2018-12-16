@@ -16,7 +16,7 @@ if(password_verify($passwordeingabe, $passwordausDB)) { //überprüft wenn es de
 
     session_start();
     $_SESSION["username"] = $usernameausDB;
-    $_SESSION["id"] = $userIDausDB;
+    $_SESSION["id"] = $idausDB;
     header ('Location: ../../index.php');
 } else {
     echo "Login fehlgeschlagen. Du wirst zurück zum Login geleitet.";
