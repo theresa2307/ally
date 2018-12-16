@@ -11,7 +11,7 @@
 <body>
 <div id="loginbox">
     <div id="loginheader">ally</div>
-    <div id="login"
+    <div id="login">
     <form id="formular" action="./functions/users/login_do.php" method="post">
         <div id="ueberschrift">Login</div>
         <div id="linie_anfang"></div>
