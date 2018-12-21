@@ -1,9 +1,14 @@
-<form action="./create_do.php" method="post" enctype="multipart/form-data">
-    <span>Titel</span>
-    <input type="text" maxlength="50" name="titel" placeholder="titel" />
-    <span>Text</span>
-    <textarea maxlength="200" name="text" placeholder="text" rows="10"></textarea>
-    <input type="file" name="bild"/>
-    <input type="submit" value="erstellen"/>
-</form>
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Unbenanntes Dokument</title>
+</head>
 
+<body>
+<form action="create_do.php" method="post" enctype="multipart/form-data">
+<input type="file" name="datei"><br>
+<input type="submit" value="Hochladen">
+</form>
+</body>
+</html>
