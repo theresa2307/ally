@@ -33,16 +33,13 @@ if($statement->execute()) {
 <div id="loginbox">
     <div id="loginheader">ally</div>
     <div id="login">
-        <form action="./functions/users/registration_do.php" method="post" id="formular">
-            <div id="ueberschrift">Registrierung</div>
-            <div id="linie_anfang"></div>
-            <input type="text" id="email" name="email" placeholder="Email" style="text-align: left; line-height: 0px; padding-left: 10px;"><br>
-            <input type="text" id="username" name="username" placeholder="Username" style="text-align: left; line-height: 0px;"><br>
-            <input type="password" id="passwort" name="password" placeholder="Passwort" style="text-align: left; line-height: 0px;"><br>
-            <input type="password" id="passwort_wiederholen" name="password2" placeholder="Passwort wiederholen" style="text-align: left; line-height: 0px;"><br>
-            <button type="submit" class="button">Registrieren</button>
-            <div id="linie_ende"></div>
-            </form>
+        <form action="./functions/users/registration_do.php" method="post">
+            <input type="text" id="email" name="email" placeholder="Email" required><br>
+            <input type="text" id="username" name="username" placeholder="Username" required><br>
+            <input type="password" id="passwort" name="password" placeholder="Passwort" required><br>
+            <input type="password" id="passwort_wiederholen" name="password2" placeholder="Passwort wiederholen" required><br>
+            <input type="submit" class="button" value="anmelden">
+        </form>
     </div>
     <div id="loginfooter">
         <div id="loginfooter_text">

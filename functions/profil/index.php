@@ -1,7 +1,9 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: theresa
- * Date: 03.12.18
- * Time: 12:13
- */
+switch ($_GET["action"]){
+    case"edit":
+        include"./functions/profil/profil_form.php";
+        break;
+    default:
+        include"./functions/profil/profil.php";
+};
+?>

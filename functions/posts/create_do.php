@@ -1,23 +1,10 @@
 <?php
-/*
+
 include('../../database.php');
 $pdo=new PDO ($host, $user, $password);
 
 $username =$_POST[".$new_path."];
 
-$statement = $pdo->prepare("INSERT INTO posts (datei) VALUES (:$new_path)");
-
-$statement->bindParam(".$new_path.", $_POST["datei"]);
-
-if($statement->execute()){
-    echo 'id in der Datenbank: '.$id=$pdo->lastInsertId();
-} else{
-    echo 'Datenbank-Fehler:';
-    echo $statement->errorInfo()[2];
-    echo $statement->queryString;
-    die();
-}
-*/
 
 $upload_folder = 'uploads/files/'; //Das Upload-Verzeichnis
 $filename = pathinfo($_FILES['datei']['name'], PATHINFO_FILENAME);
@@ -47,7 +34,13 @@ if(function_exists('exif_imagetype')) { //exif_imagetype erfordert die exif-Erwe
  
 //Pfad zum Upload
 $new_path = $upload_folder.$filename.'.'.$extension;
- 
+$db_path= $filename.'.'.$extension;
+
+$statement = $pdo->prepare("INSERT INTO posts (datei) VALUES (:db_path)"); //SQL Befehl
+
+$statement->bindParam(':db_path', $db_path);
+ $statement->execute();
+
 //Neuer Dateiname falls die Datei bereits existiert
 if(file_exists($new_path)) { //Falls Datei existiert, hänge eine Zahl an den Dateinamen
  $id = 1;
