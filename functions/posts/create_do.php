@@ -1,4 +1,24 @@
 <?php
+/*
+include('../../database.php');
+$pdo=new PDO ($host, $user, $password);
+
+$username =$_POST[".$new_path."];
+
+$statement = $pdo->prepare("INSERT INTO posts (datei) VALUES (:$new_path)");
+
+$statement->bindParam(".$new_path.", $_POST["datei"]);
+
+if($statement->execute()){
+    echo 'id in der Datenbank: '.$id=$pdo->lastInsertId();
+} else{
+    echo 'Datenbank-Fehler:';
+    echo $statement->errorInfo()[2];
+    echo $statement->queryString;
+    die();
+}
+*/
+
 $upload_folder = 'uploads/files/'; //Das Upload-Verzeichnis
 $filename = pathinfo($_FILES['datei']['name'], PATHINFO_FILENAME);
 $extension = strtolower(pathinfo($_FILES['datei']['name'], PATHINFO_EXTENSION));
@@ -40,4 +60,5 @@ if(file_exists($new_path)) { //Falls Datei existiert, hänge eine Zahl an den Da
 //Alles okay, verschiebe Datei an neuen Pfad
 move_uploaded_file($_FILES ['datei']['tmp_name'], $new_path);
 echo 'Bild erfolgreich hochgeladen: <a href="'.$new_path.'">'.$new_path.'</a>';
+echo $new_path;
 ?>
