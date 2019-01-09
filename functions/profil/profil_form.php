@@ -14,3 +14,7 @@ while ($zeile = $statement->fetchObject()) {
     echo "</form>";
 }
 ?>
+<form action="./functions/profil/create_do.php" method="post" enctype="multipart/form-data">
+    <input type="file" name="datei"><br>
+    <input type="submit" value="Hochladen">
+</form>

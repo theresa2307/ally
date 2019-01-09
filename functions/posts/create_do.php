@@ -53,5 +53,13 @@ if(file_exists($new_path)) { //Falls Datei existiert, hänge eine Zahl an den Da
 //Alles okay, verschiebe Datei an neuen Pfad
 move_uploaded_file($_FILES ['datei']['tmp_name'], $new_path);
 echo 'Bild erfolgreich hochgeladen: <a href="'.$new_path.'">'.$new_path.'</a>';
-echo $new_path;
+function generateRandomString($length = 10) {
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $charactersLength = strlen($characters);
+    $randomString = '';
+    for ($i = 0; $i < $length; $i++) {
+        $randomString .= $characters[rand(0, $charactersLength - 1)];
+    }
+    return $randomString;
+}
 ?>
