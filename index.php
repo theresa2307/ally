@@ -22,7 +22,6 @@
 <?php
 session_start();
 $logged_user = $_SESSION['username'];
-$date = date("Y-m-d h:i:sa");
 
 ?>
 <ul>

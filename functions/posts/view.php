@@ -10,7 +10,7 @@ while ($follower_dump = $query_follow->fetch(PDO::FETCH_ASSOC) // alle ausgaben 
 }
 
 $follower_array2 = join("','",$follower_array); // es soll alle post von mir und denen ich folge angezeigt werden, follower_array2=join-> dass es rcihtig ausgelesen werden kann
-$query = $pdo->prepare ("SELECT * FROM posts WHERE username IN ('$follower_array2') OR username= :username ORDER BY datum DESC");
+$query = $pdo->prepare ("SELECT * FROM posts WHERE username IN ('$follower_array2') OR username= :username ORDER BY datum DESC"); //nach datum sortiert
 $query->execute(array('username' => $logged_user)); // liest alles aus post aus der db
 $query2 = $pdo->prepare ("SELECT * FROM profiles WHERE username IN ('$follower_array2') OR username= :username"); //
 $query2->execute(array('username' => $logged_user)); //liest alle saus der db spalte des nutzername oder wo der nutezrname gleich dem nutezrname ist

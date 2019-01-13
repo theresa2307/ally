@@ -7,7 +7,7 @@ $username =$_POST[".$new_path."];
 $logged_user = htmlspecialchars($_SESSION['username']);
 $post = htmlspecialchars($_POST['post']);
 $posttitle = htmlspecialchars($_POST['posttitle']);
-$date = date("Y-m-d h:i:sa");
+$date = date("Y-m-d H:i:sa");
 
 
 $upload_folder = 'uploads/files/'; //Das Upload-Verzeichnis
