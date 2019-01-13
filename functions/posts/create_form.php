@@ -1,14 +1,15 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>Unbenanntes Dokument</title>
-</head>
+<?php
 
-<body>
-<form action="create_do.php" method="post" enctype="multipart/form-data">
+if (isset($logged_user)) {
+
+	?>
+<form action="./functions/posts/create_do.php" method="post" enctype="multipart/form-data">
+<input type="text" name="posttitle" required>
+<textarea name='post' placeholder='Was willst du posten?' rows='10' required></textarea>
 <input type="file" name="datei"><br>
 <input type="submit" value="Hochladen">
 </form>
-</body>
-</html>
+
+<?php
+	
+}else echo "bitte erst einloggen!";
