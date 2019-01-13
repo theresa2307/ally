@@ -4,18 +4,17 @@ session_start();
 include('../../database.php');
 $pdo=new PDO ($host, $user, $password);
 
-$username =$_POST[".$new_path."];
-$logged_user = $_SESSION['username'];
+$logged_user = $_SESSION['username']; // Nutzername wird aus session gelesen
 
 
 $upload_folder = 'uploads/files/'; //Das Upload-Verzeichnis
-$filename = pathinfo($_FILES['datei']['name'], PATHINFO_FILENAME);
-$extension = strtolower(pathinfo($_FILES['datei']['name'], PATHINFO_EXTENSION));
+$filename = pathinfo($_FILES['datei']['name'], PATHINFO_FILENAME); //liest den filenamen aus
+$extension = strtolower(pathinfo($_FILES['datei']['name'], PATHINFO_EXTENSION)); // liest die bildendung zb pdf,png aus. strtolower -> kleinbuchstaben
  
  
 //Überprüfung der Dateiendung
 $allowed_extensions = array('png', 'jpg', 'jpeg', 'gif');
-if(!in_array($extension, $allowed_extensions)) {
+if(!in_array($extension, $allowed_extensions)) { // wenn es nicht im array drin ist, also keine der endung entspricht, bricht es ab -> die
  die("Ungültige Dateiendung. Nur png, jpg, jpeg und gif-Dateien sind erlaubt");
 }
  
@@ -35,15 +34,15 @@ if(function_exists('exif_imagetype')) { //exif_imagetype erfordert die exif-Erwe
 }
  
 //Pfad zum Upload
-$new_path = $upload_folder.$filename.'.'.$extension;
-$db_path= $filename.'.'.$extension;
+$new_path = $upload_folder.$filename.'.'.$extension; //komplette Dateipfad
+$db_path= $filename.'.'.$extension; //nur die dateiname und endung in der db
 
 //Neuer Dateiname falls die Datei bereits existiert
 if(file_exists($new_path)) { //Falls Datei existiert, hänge eine Zahl an den Dateinamen
  $id = 1;
  do {
  $new_path = $upload_folder.$filename.'_'.$id.'.'.$extension;
- $id++;
+ $id++; //zahl wird um eisn erhöht
  } while(file_exists($new_path));
 }
  
@@ -61,12 +60,12 @@ function generateRandomString($length = 10) {
 }
 
 
-$logged_user = $_SESSION['username'];
-$full_name = $_POST['full_name'];
-$bio = $_POST['bio'];
+$logged_user = $_SESSION['username']; //hier wird es in die db hochgeladen
+$full_name = htmlspecialchars($_POST['full_name']);
+$bio = htmlspecialchars($_POST['bio']);
 include('../../database.php');
 $statement = $pdo->prepare("UPDATE profiles SET name= :name, bio= :bio, datei= :datei WHERE username= :username");
-$result = $statement->execute(array('name' => $full_name, 'bio' => $bio, 'username' => $logged_user, 'datei' => $db_path));
+$statement->execute(array('name' => $full_name, 'bio' => $bio, 'username' => $logged_user, 'datei' => $db_path));
 $pdo = null;
 header ('Location: ../../index.php')
 

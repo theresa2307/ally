@@ -1,8 +1,8 @@
 <?php
 
-if (isset($logged_user)) {
+if (isset($logged_user)) { // wird nur angezeigt, wenn man einhgeloggt ist
 
-	?>
+?>
 <form action="./functions/posts/create_do.php" method="post" enctype="multipart/form-data">
 <input type="text" name="posttitle" required>
 <textarea name='post' placeholder='Was willst du posten?' rows='10' required></textarea>
@@ -12,4 +12,5 @@ if (isset($logged_user)) {
 
 <?php
 	
-}else echo "bitte erst einloggen!";
+}else echo "Bitte zuerst <a href='?page=users&action=login'>einloggen</a>";
+?>

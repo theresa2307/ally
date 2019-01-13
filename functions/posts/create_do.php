@@ -4,9 +4,9 @@ include('../../database.php');
 $pdo=new PDO ($host, $user, $password);
 
 $username =$_POST[".$new_path."];
-$logged_user = $_SESSION['username'];
-$post = $_POST['post'];
-$posttitle = $_POST['posttitle'];
+$logged_user = htmlspecialchars($_SESSION['username']);
+$post = htmlspecialchars($_POST['post']);
+$posttitle = htmlspecialchars($_POST['posttitle']);
 $date = date("Y-m-d h:i:sa");
 
 
@@ -16,7 +16,7 @@ $extension = strtolower(pathinfo($_FILES['datei']['name'], PATHINFO_EXTENSION));
  
  
 //Überprüfung der Dateiendung
-$allowed_extensions = array('png', 'jpg', 'jpeg', 'gif');
+$allowed_extensions = array('png', 'jpg', 'jpeg', 'gif'); // wenn es nicht im array drin ist, also keine der endung entspricht, bricht es ab -> die
 if (!isset($filename)) {
 	if(!in_array($extension, $allowed_extensions)) {
 	 die("Ungültige Dateiendung. Nur png, jpg, jpeg und gif-Dateien sind erlaubt");
@@ -46,7 +46,7 @@ if(function_exists('exif_imagetype')) { //exif_imagetype erfordert die exif-Erwe
 $new_path = $upload_folder.$filename.'.'.$extension;
 $db_path= $filename.'.'.$extension;
 
-if (isset($filename)) {
+if (isset($filename)) { //die schleife schaut, ob ein bild hochgeladen wird, wenn ja dann 1. befehl. datei wird hochgeladen
 $statement = $pdo->prepare("INSERT INTO posts (datei, username, datum, text, titel) VALUES (:db_path, :username, :date, :post, :title)"); //SQL Befehl
 
 $statement->bindParam(':db_path', $db_path);
@@ -55,7 +55,7 @@ $statement->bindParam(':date', $date);
 $statement->bindParam(':post', $post);
 $statement->bindParam(':title', $posttitle);
 $statement->execute();
-}else {
+}else { // wenn nein wird keine datei hochgeladen
 $statement = $pdo->prepare("INSERT INTO posts (username, datum, text, titel) VALUES (:username, :date, :post, :title)"); //SQL Befehl
 
 $statement->bindParam(':username', $logged_user);

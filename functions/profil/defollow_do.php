@@ -1,7 +1,7 @@
 <?php
 session_start();
-$logged_user = $_SESSION['username'];
-$defollow = $_POST['defollow'];
+$logged_user = $_SESSION['username']; //eingeloggte username wird ausgelesen
+$defollow = $_POST['defollow']; //aus dem formular
 include('../../database.php');
 
 $db = new PDO($host, $user, $password);
