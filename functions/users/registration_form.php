@@ -1,9 +1,3 @@
-<?php
-$pdo=new PDO('mysql:: host=mars.iuk.hdm-stuttgart.de; 
- dbname=u-ts175', 'ts175', 'ohngoow2Oo',
-    array('charset'=>'utf8'));
-?>
-
 <!doctype html>
 <html lang="de">
 <head>
@@ -13,22 +7,6 @@ $pdo=new PDO('mysql:: host=mars.iuk.hdm-stuttgart.de;
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
 </head>
 <body>
-
-<?php
-session_start();
-include "../../database.php";
-$statement = $pdo->prepare('SELECT * FROM users');
-if($statement->execute()) {
-    while($row=$statement->fetch()) {
-        echo $row['email'].' '.$row['username'].' '.$row['password'].' '.$row['password2']."<br>";
-    }
-} else {
-    echo 'Datenbank-Fehler:';
-    echo $statement->errorInfo()[2];
-    echo $statement->queryString;
-    die();
-}
-?>
 
 <div id="loginbox">
     <div id="loginheader">ally</div>
