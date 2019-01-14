@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="../../style/style.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../../style/style_login.css" media="screen" />
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
 
@@ -14,8 +14,8 @@
     <div id="login">
         <form action="./functions/users/login_do.php" method="post">
             <div id="ueberschrift">Login</div>
-            <input type="text" name="username" placeholder="Username"><br>
-            <input type="password" name="password" placeholder="Passwort"><br>
+            <input id="username" type="text" name="username" placeholder="Username"><br>
+            <input id="passwort" type="password" name="password" placeholder="Passwort"><br>
             <input type="submit" class="button" value="anmelden">
         </form>
     </div>

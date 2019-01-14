@@ -19,7 +19,7 @@ body{
 }
 
 #loginheader{
-	width:100%;
+	width:100% !important;
 	height:90px;
 	background-color:#111;
 	font-family: 'Pacifico', cursive;
@@ -111,19 +111,6 @@ label {
 	line-height: 20px;
 	float:left;
 }
-#passwort_vergessen{
-	height:20px;
-	width:40%;
-	margin-top:18px;
-	font-family: 'Montserrat', sans-serif;
-	font-size: 12px;
-	text-decoration: none;
-	color:#E2E2E2;
-	line-height: 20px;
-	padding-right:10%;
-	text-align: right !important;
-	float: right;
-}
 
 
 .button{
@@ -212,3 +199,156 @@ label {
 	color:#000;
 }
 
+@media (min-width: 1000px) and (max-width: 1363px){
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+	body {
+		background-image: none;
+		background: #222;
+	}
+
+	#loginbox {
+		min-width: none;
+		width: 100%;
+		height: auto;
+		margin-top: 0%;
+		margin-left: none;
+		margin-right: none;
+	}
+
+	#loginheader {
+		height: 300px;
+		line-height: 250px;
+		border-top-right-radius: 0px;
+		border-top-left-radius: 0px;
+		font-size: 150px;
+	}
+
+	#login {
+		height: auto;
+		background: none;
+	}
+
+	#formular {
+		width: 100% !important;
+	}
+
+	#ueberschrift {
+		height: 100px;
+		width: 90%;
+		padding-top: 40px;
+		font-size: 70px;
+	}
+
+	#username {
+		height: 100px;
+		line-height: 100px;
+		font-size: 40px;
+		width: 77%;
+		margin-top: 35px;
+		margin-left: 10%;
+		margin-right: 10%;
+		background-color: #FFF;
+		top: 40px;
+		padding-left: 3%;
+		color: #000;
+	}
+
+	#passwort {
+		height: 100px;
+		line-height: 100px;
+		font-size: 40px;
+		width: 77%;
+		margin-top: 30px;
+		margin-left: 10%;
+		margin-right: 10%;
+		padding-left: 3%;
+		background-color: #FFF;
+		top: 50px;
+	}
+
+	input::placeholder {
+		padding: 1px;
+		font-size: 40px;
+	}
+
+	label {
+		padding: 1px;
+		line-height: 100px;
+		font-size: 40px;
+	}
+
+	.button {
+		height: 100px;
+		width: 81%;
+		margin-top: 35px;
+		font-size: 40px;
+	}
+
+	#loginfooter {
+		width: 100%;
+		height: 300px;
+		background-color: #111;
+		margin-bottom: 0px;
+		border-bottom-left-radius: 0px;
+		border-bottom-right-radius: 0px;
+		position: absolute;
+		bottom: 0;
+	}
+
+	#loginfooter_text {
+		width: 80%;
+		height: 50px;
+		line-height: 50px;
+		font-family: 'Montserrat', sans-serif;
+		font-size: 40px;
+		color: #E2E2E2;
+		text-align: center;
+		margin-top: 50px;
+		padding-left: none;
+		margin-left: auto;
+		margin-right: auto;
+		float: left;
+	}
+
+	#loginfooter_button {
+		width: 100%;
+		height: 100px;
+		font-family: 'Montserrat', sans-serif;
+		font-size: 40px;
+		color: #E2E2E2;
+		text-align: center;
+		line-height: 60px;
+		padding-right: 0%;
+		margin-top: 30px;
+		float: left;
+	}
+
+	#button_registrieren {
+		width: 80%;
+		height: 100px;
+		line-height: 100px;
+		font-family: 'Montserrat', sans-serif;
+		font-size: 40px;
+		color: #E2E2E2;
+		background-color: #00AE25;
+		margin-left: auto;
+		margin-right: auto;
+		border: none;
+	}
+
+	input {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+	}
+
+	@media (min-width: 480px) and (max-width: 768px) {
+		body {
+			background-image: none;
+			background: #FFF;
+		}
+	}
+	@media (max-width: 480px) {
+	}  }

@@ -29,6 +29,6 @@ $statement->execute();
 
 while ($zeile = $statement->fetchObject()) { //liest so lange aus bis nichts mehr gibt
     echo "Name: $zeile->name <br>";
-    echo "Bio: $zeile->bio <br><br>"; //profilname und Bio wird angegeben, ausgegeben
+    echo "Bio: $zeile->bio<br>"; //profilname und Bio wird angegeben, ausgegeben
 }
 ?>

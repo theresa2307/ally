@@ -12,6 +12,7 @@
     <div id="loginheader">ally</div>
     <div id="login">
         <form action="./functions/users/registration_do.php" method="post">
+			<div id="ueberschrift">Registrierung</div>
             <input type="text" id="email" name="email" placeholder="Email" required><br>
             <input type="text" id="username" name="username" placeholder="Username" required><br>
             <input type="password" id="passwort" name="password" placeholder="Passwort" required><br>

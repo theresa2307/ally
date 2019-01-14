@@ -2,15 +2,11 @@
 /* CSS Document */
 
 body{
-    width:100%;
-    height:100%;
-    background-image:
-            linear-gradient(hsla(215,30%,70%,0.9) 0%, hsla(215,30%,70%,0) 50%, hsla(215,30%,70%,0.9) 100%),
-            linear-gradient(to right, hsla(215,30%,80%,0.8) 30%, white 50%, hsla(215,30%,80%,0.8) 70%);
-
-
-    padding: 0;
-    margin: 0;
+	width:100%;
+	height:100%;
+	background-image: url("../pics/hintergrund_login_2.png");
+	padding: 0;
+	margin: 0;
 }
 
 #loginbox{
@@ -26,17 +22,16 @@ body{
 #loginheader{
     width:100%;
     height:90px;
-    background-color:#222;
+    background-color:#111;
     font-family: 'Pacifico', cursive;
     font-size:50px;
-    color: #E2E2E2;
+    color: #FFFFFF;
     text-align: center;
     line-height: 78px;
     margin-bottom: 0px;
     border-top-right-radius: 40px;
     border-top-left-radius:40px;
 }
-
 #login{
     width:100%;
     height:350px;
@@ -68,49 +63,49 @@ body{
 
 #email{
     height:35px;
-    width:80%;
+    width:79%;
     margin-top:15px;
     margin-left:10%;
     margin-right:10%;
     background-color:#FFF;
-    text-align: center; !important;
-    line-height: 0px; !important;
+    text-align: left;
+    line-height: 35px;
     top:40px;
-    padding-left: 10px;
+    padding-left: 1%;
     color:#000;
 }
 
 #username{
     height:35px;
-    width:80%;
+    width:79%;
     margin-top:15px;
     margin-left:10%;
     margin-right:10%;
     background-color:#FFF;
     top:10px;
     color:#000;
-    padding-left: 10px;
+    padding-left: 1%;
     line-height: 35px;
 }
 
 #passwort{
     height:35px;
-    width:80%;
+    width:79%;
     margin-top:10px;
     margin-left:10%;
     margin-right:10%;
-    padding-left: 10px;
+    padding-left: 1%;
     background-color:#FFF;
     top:50px;
 }
 
 #passwort_wiederholen{
     height:35px;
-    width:80%;
+    width:79%;
     margin-top:10px;
     margin-left:10%;
     margin-right:10%;
-    padding-left: 10px;
+    padding-left: 1%;
     background-color:#FFF;
     top:50px;
 }
@@ -125,15 +120,15 @@ label {
 
 .button{
     height:35px;
-    width:81%;
-    margin-top:15px;
-    margin-left:10%;
-    margin-right:10%;
-    background-color: #244A76;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 12px;
-    color:#E2E2E2;
-    border: none;
+	width:79%;
+	margin-top:15px;
+	margin-left:10%;
+	margin-right:10%;
+	background-color: #333;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 12px;
+	color:#E2E2E2;
+	border: none;
 }
 
 #linie_ende {
@@ -154,37 +149,205 @@ label {
 }
 
 #loginfooter_text {
-    width:45%;
-    height:40px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 12px;
-    color: #E2E2E2;
-    text-align: left;
-    line-height: 60px;
-    padding-left:5%;
-    float:left;
+	width:40%;
+	height:60px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 12px;
+	color: #E2E2E2;
+	text-align: left;
+	line-height: 60px;
+	padding-left:10%;
+	float:left;
 }
 
 #loginfooter_button {
-    width:45%;
-    height:40px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 12px;
-    color: #E2E2E2;
-    text-align: right;
-    line-height: 60px;
-    padding-right:5%;
-    float:left;
+	width:40%;
+	height:60px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 12px;
+	color: #E2E2E2;
+	text-align: right;
+	line-height: 60px;
+	padding-right:10%;
+	float:left;
 }
 
 #button_login{
     width:60%;
-    height:25px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 12px;
-    color: #E2E2E2;
-    background-color: #00AE25;
-    border:none;
-    border-radius: 3px;
+	height:25px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 12px;
+	color: #E2E2E2;
+	background-color: #00AE25;
+	border:none;
+	border-radius: 3px;
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+	body {
+		background-image: none;
+		background: #222;
+	}
+
+	#loginbox {
+		min-width: none;
+		width: 100%;
+		height: auto;
+		margin-top: 0%;
+		margin-left: none;
+		margin-right: none;
+	}
+
+	#loginheader {
+		height: 300px;
+		line-height: 250px;
+		border-top-right-radius: 0px;
+		border-top-left-radius: 0px;
+		font-size: 150px;
+	}
+
+	#login {
+		height: auto;
+		background: none;
+	}
+
+	#formular {
+		width: 100% !important;
+	}
+
+	#ueberschrift {
+		height: 100px;
+		width: 90%;
+		padding-top: 40px;
+		font-size: 70px;
+	}
+	#email {
+		height: 100px;
+		line-height: 100px;
+		font-size: 40px;
+		width: 79%;
+		margin-top: 35px;
+		margin-left: 10%;
+		margin-right: 10%;
+		background-color: #FFF;
+		top: 40px;
+		padding-left: 1%;
+		color: #000;
+	}
+
+	#username {
+		height: 100px;
+		line-height: 100px;
+		font-size: 40px;
+		width: 79%;
+		margin-top: 35px;
+		margin-left: 10%;
+		margin-right: 10%;
+		background-color: #FFF;
+		top: 40px;
+		padding-left: 1%;
+		color: #000;
+	}
+
+	#passwort {
+		height: 100px;
+		line-height: 100px;
+		font-size: 40px;
+		width: 79%;
+		margin-top: 30px;
+		margin-left: 10%;
+		margin-right: 10%;
+		padding-left: 1%;
+		background-color: #FFF;
+		top: 50px;
+	}
+	
+	#passwort_wiederholen {
+		height: 100px;
+		line-height: 100px;
+		font-size: 40px;
+		width: 79%;
+		margin-top: 30px;
+		margin-left: 10%;
+		margin-right: 10%;
+		padding-left: 1%;
+		background-color: #FFF;
+		top: 50px;
+	}
+
+	input::placeholder {
+		padding: 1px;
+		font-size: 40px;
+	}
+
+	label {
+		padding: 1px;
+		line-height: 100px;
+		font-size: 40px;
+	}
+
+	.button {
+		height: 100px;
+		width: 81%;
+		margin-top: 35px;
+		font-size: 40px;
+	}
+
+	#loginfooter {
+		width: 100%;
+		height: 300px;
+		background-color: #111;
+		margin-bottom: 0px;
+		border-bottom-left-radius: 0px;
+		border-bottom-right-radius: 0px;
+		position: absolute;
+		bottom: 0;
+	}
+
+	#loginfooter_text {
+		width: 80%;
+		height: 50px;
+		line-height: 50px;
+		font-family: 'Montserrat', sans-serif;
+		font-size: 40px;
+		color: #E2E2E2;
+		text-align: center;
+		margin-top: 50px;
+		padding-left: none;
+		margin-left: auto;
+		margin-right: auto;
+		float: left;
+	}
+
+	#loginfooter_button {
+		width: 100%;
+		height: 100px;
+		font-family: 'Montserrat', sans-serif;
+		font-size: 40px;
+		color: #E2E2E2;
+		text-align: center;
+		line-height: 60px;
+		padding-right: 0%;
+		margin-top: 30px;
+		float: left;
+	}
+
+	#button_login {
+		width: 80%;
+		height: 100px;
+		line-height: 100px;
+		font-family: 'Montserrat', sans-serif;
+		font-size: 40px;
+		color: #E2E2E2;
+		background-color: #00AE25;
+		margin-left: auto;
+		margin-right: auto;
+		border: none;
+	}
+
+	input {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+	}
 

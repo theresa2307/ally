@@ -4,10 +4,10 @@ if (isset($logged_user)) { // wird nur angezeigt, wenn man einhgeloggt ist
 
 ?>
 <form action="./functions/posts/create_do.php" method="post" enctype="multipart/form-data">
-<input type="text" name="posttitle" required>
+<input type="text" placeholder="Titel" name="posttitle" required>
 <textarea name='post' placeholder='Was willst du posten?' rows='10' required></textarea>
 <input type="file" name="datei"><br>
-<input type="submit" value="Hochladen">
+<input type="submit" value="hochladen">
 </form>
 
 <?php
