@@ -12,5 +12,5 @@ if($statement->rowCount() > 0) { //wird geschaut, ob er was in der db gefunden h
         echo '<a href="?page=profile&user=' . $userdb->username . '">' . $userdb->username . '</a>';
         echo "<br>";
     }
-}else echo "nichts gefunden";
+}else echo "Kein Mitglied gefunden";
 ?>

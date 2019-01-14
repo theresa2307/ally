@@ -22,7 +22,7 @@ $logged_user = $_SESSION['username'];
 ?>
 <ul>
     <li>
-        <a href="index.php">Home</a>
+        <a href="index.php">Startseite</a>
         <?php
         if (isset($logged_user)) {
             echo "<a href='?page=users&action=logout'>Logout</a>";
@@ -31,7 +31,6 @@ $logged_user = $_SESSION['username'];
         };
         ?>
         <a href="?page=users&action=registrierung">Registrierung</a>
-        <a href="?page=posts&action=news">Neuigkeiten</a>
         <?php
         if(isset($logged_user)) {
 			echo "<a href='?page=posts&action=create'>Post erstellen</a>";
@@ -55,9 +54,6 @@ if (isset($_GET['q'])){ //suche, get-> dass man NUR den findet, den man sucht
             break;
         case"profile":
             include "./functions/profil/index.php";
-            break;
-        case"news":
-            include "./functions/news/index.php";
             break;
         case"search": //suche
             include "./functions/posts/search_do.php";
