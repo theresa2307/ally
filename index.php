@@ -33,9 +33,8 @@ $logged_user = $_SESSION['username'];
         <a href="?page=users&action=registrierung">Registrierung</a>
         <?php
         if(isset($logged_user)) {
-			echo "<a href='?page=posts&action=create'>Post erstellen</a>";
-            echo "<a href='?page=profile&user=$logged_user'>Profil</a>";
-			echo "<a href='?page=news&action=view'>Das hast du verpasst</a>";
+			echo "<a href='?page=posts&action=create'>Neuer Beitrag</a>";
+            echo "<a href='?page=profile&user=$logged_user'>Mein Profil</a>";
         }
         include_once('./functions/posts/search_form.php');
         ?>
