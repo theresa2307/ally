@@ -12,7 +12,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-    <link rel="stylesheet" type="text/css" href="./style/style_login.css" />
+    <link rel="stylesheet" type="text/css" href="style/style.css" />
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
     <meta charset="utf-8">
@@ -42,25 +42,33 @@ $logged_user = $_SESSION['username'];
             echo "<a href='?page=profile&user=$logged_user'>Profil</a>";
 			echo "<a href='?page=news&action=view'>Das hast du verpasst</a>";
         }
+        include_once('./functions/posts/search_form.php');
         ?>
     </li>
 </ul>
 <?php
-switch ($_GET["page"]){
-    case"users":
-        include "./functions/users/index.php";
-        break;
-    case"posts":
-        include "./functions/posts/index.php";
-        break;
-    case"profile":
-        include "./functions/profil/index.php";
-        break;
-    case"news":
-        include "./functions/news/index.php";
-        break;
-    default:
-        include"./functions/posts/view.php";
+if (isset($_GET['q'])){ //suche, get-> dass man NUR den findet, den man sucht
+    include('./functions/posts/search_do.php');
+}else {
+    switch ($_GET["page"]){
+        case"users":
+            include "./functions/users/index.php";
+            break;
+        case"posts":
+            include "./functions/posts/index.php";
+            break;
+        case"profile":
+            include "./functions/profil/index.php";
+            break;
+        case"news":
+            include "./functions/news/index.php";
+            break;
+        case"search": //suche
+            include "./functions/posts/search_do.php";
+            break;
+        default:
+            include"./functions/posts/view.php";
+    }
 }
 ?>
 </body>

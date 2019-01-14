@@ -4,11 +4,7 @@
 body{
 	width:100%;
 	height:100%;
-	background-image: 
-    linear-gradient(hsla(215,30%,70%,0.9) 0%, hsla(215,30%,70%,0) 50%, hsla(215,30%,70%,0.9) 100%), 
-    linear-gradient(to right, hsla(215,30%,80%,0.8) 30%, white 50%, hsla(215,30%,80%,0.8) 70%);
-
-
+	background-image: url("../pics/hintergrund_login_2.png");
 	padding: 0;
 	margin: 0;
 }
@@ -25,7 +21,7 @@ body{
 #loginheader{
 	width:100%;
 	height:90px;
-	background-color:#222222;
+	background-color:#111;
 	font-family: 'Pacifico', cursive;
 	font-size:50px;
 	color: #FFFFFF;
@@ -67,31 +63,32 @@ body{
 
 #username{
 	height:35px;
-	width:78%;
+	width:77%;
 	margin-top:15px;
 	margin-left:10%;
 	margin-right:10%;
 	background-color:#FFF;
 	top:40px;
-	padding-left:2%;
+	padding-left:3%;
 	color:#000;
 }
 
 #passwort{
 	height:35px;
-	width:80%;
+	width:77%;
 	margin-top:10px;
 	margin-left:10%;
 	margin-right:10%;
+	padding-left:3%;
 	background-color:#FFF;
 	top:50px;
 }
 
 input::placeholder {
-  padding:10px;
+  padding:1px;
 }
 label {
-  padding:10px;
+  padding:1px;
 }
 
 #login_merken{
@@ -135,7 +132,7 @@ label {
 	margin-top:15px;
 	margin-left:10%;
 	margin-right:10%;
-	background-color: #244A76;
+	background-color: #333;
 	font-family: 'Montserrat', sans-serif;
 	font-size: 12px;
 	color:#E2E2E2;
@@ -154,32 +151,32 @@ label {
 #loginfooter{
 	width:100%;
 	height:60px;
-	background-color:#222222;
+	background-color:#111;
 	border-bottom-left-radius: 40px;
 	border-bottom-right-radius: 40px;
 }
 
 #loginfooter_text {
-	width:45%;
+	width:40%;
 	height:60px;
 	font-family: 'Montserrat', sans-serif;
 	font-size: 12px;
 	color: #E2E2E2;
 	text-align: left;
 	line-height: 60px;
-	padding-left:5%;
-	float:left;	
+	padding-left:10%;
+	float:left;
 }
 
 #loginfooter_button {
-	width:45%;
+	width:40%;
 	height:60px;
 	font-family: 'Montserrat', sans-serif;
 	font-size: 12px;
 	color: #E2E2E2;
 	text-align: right;
 	line-height: 60px;
-	padding-right:5%;
+	padding-right:10%;
 	float:left;
 }
 

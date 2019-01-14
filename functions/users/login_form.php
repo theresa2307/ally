@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="../../style/style_login.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../../style/style.css" media="screen" />
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
 
