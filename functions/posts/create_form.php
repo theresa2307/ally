@@ -1,4 +1,10 @@
-<?php
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style/style_profil.css" />
+</head>
+<body>
+<div id="content">
+    <?php
 
 if (isset($logged_user)) { // wird nur angezeigt, wenn man einhgeloggt ist
 
@@ -14,3 +20,7 @@ if (isset($logged_user)) { // wird nur angezeigt, wenn man einhgeloggt ist
 	
 }else echo "Bitte zuerst <a href='?page=users&action=login'>einloggen</a>";
 ?>
+</div>
+</body>
+</html>
+

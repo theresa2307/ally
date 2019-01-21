@@ -2,12 +2,13 @@
 <html lang="de">
 <head>
 
-        <!-- Einbindung Stylesheet-->
+    <!-- Einbindung Stylesheet-->
 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-    <link rel="stylesheet" type="text/css" href="style/style_login.css" />
+    <link rel="stylesheet" type="text/css" href="style/style_index.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
     <meta charset="utf-8">
@@ -17,26 +18,39 @@
 <?php
 session_start();
 $logged_user = $_SESSION['username'];
-
 ?>
-<ul>
-    <li>
-        <a href="index.php">Startseite</a>
+<div id="header">
+    <div id="header_content">
+        <div id="logo">ally</div>
         <?php
-        if (isset($logged_user)) {
-            echo "<a href='?page=users&action=logout'>Logout</a>";
-        } else {
-            echo "<a href='?page=users&action=login'>Login</a>";
-        };
-        ?>
-        <a href="?page=users&action=registrierung">Registrierung</a>
-        <?php
-        if(isset($logged_user)) {
-			echo "<a href='?page=posts&action=create'>Neuer Beitrag</a>";
-            echo "<a href='?page=profile&user=$logged_user'>Mein Profil</a>";
-        }
         include_once('./functions/posts/search_form.php');
         ?>
+        <div id="navigation">
+            <ul>
+                <?php
+                if (isset($logged_user)) {
+                    echo "<li><a href='?page=users&action=logout'><i class=\"fas fa-sign-out-alt\"></i> Logout</a></li>";
+                } else {
+                    echo "<li><a href='?page=users&action=login'><i class=\"fas fa-sign-in-alt\"></i> Login</a></li>";
+                };
+                ?>
+                <?php
+                if(isset($logged_user)) {
+                    echo "<li><a href='?page=posts&action=create'><i class=\"fas fa-plus\"></i> Neuer Beitrag</a></li>";
+                    echo "<li><a href='?page=profile&user=$logged_user'><i class=\"fas fa-user\";></i> Mein Profil</a></li>";
+                }
+                ?>
+                <li><a href="index.php"><i class="fas fa-home"></i> Startseite</a></li>
+                <!--<li><a href="?page=users&action=registrierung">Registrierung</a></li>-->
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+<div id="content">
+
+    <a href="index.php">Startseite</a>
     </li>
 </ul>
 <?php
@@ -61,5 +75,6 @@ if (isset($_GET['q'])){ //suche, get-> dass man NUR den findet, den man sucht
     }
 }
 ?>
+</div>
 </body>
 </html>

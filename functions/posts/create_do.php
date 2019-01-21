@@ -74,7 +74,7 @@ if(file_exists($new_path)) { //Falls Datei existiert, hänge eine Zahl an den Da
  $id++;
  } while(file_exists($new_path));
 }
- 
+}
 //Alles okay, verschiebe Datei an neuen Pfad
 move_uploaded_file($_FILES ['datei']['tmp_name'], $new_path);
 echo 'Bild erfolgreich hochgeladen: <a href="'.$new_path.'">'.$new_path.'</a>';
@@ -86,7 +86,6 @@ function generateRandomString($length = 10) {
         $randomString .= $characters[rand(0, $charactersLength - 1)];
     }
     return $randomString;
-}
 }
 header('Location: ../../index.php');
 ?>
