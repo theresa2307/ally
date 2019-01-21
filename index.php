@@ -37,7 +37,7 @@ $logged_user = $_SESSION['username'];
                 <?php
                 if(isset($logged_user)) {
                     echo "<li><a href='?page=posts&action=create'><i class=\"fas fa-plus\"></i> Neuer Beitrag</a></li>";
-                    echo "<li><a href='?page=profile&user=$logged_user'><i class=\"fas fa-user\";></i> Mein Profil</a></li>";
+                    echo "<li><a href='?page=profile&user=$logged_user'><i class=\"fas fa-user\"></i> Mein Profil</a></li>";
                 }
                 ?>
                 <li><a href="index.php"><i class="fas fa-home"></i> Startseite</a></li>
