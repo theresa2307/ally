@@ -8,6 +8,7 @@ $db = new PDO($host, $user, $password);
 $statement = $db->prepare("DELETE FROM follower WHERE username = '".$logged_user."' AND follows = '".$defollow."'");
 $result = $statement->execute();
 $db = null;
-header ('Location: ../../index.php')
-	
+header("Location: ../../index.php?page=profile&user=$defollow");
+
+
 ?>

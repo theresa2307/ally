@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="../../style/style_login.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="./style/style_login.css" media="screen" />
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
 
@@ -12,7 +12,7 @@
 <div id="loginbox">
     <div id="loginheader">ally</div>
     <div id="login">
-        <form action="login_do.php" method="post">
+        <form action="./functions/users/login_do.php" method="post">
             <div id="ueberschrift">Login</div>
             <input id="username" type="text" name="username" placeholder="Username"><br>
             <input id="passwort" type="password" name="password" placeholder="Passwort"><br>
@@ -24,7 +24,7 @@
             Noch keinen Account?
         </div>
         <div id="loginfooter_button">
-            <input type="button" id="button_registrieren" value="Registrieren" onclick="window.location.href='registration_form.php'" />
+            <input type="button" id="button_registrieren" value="Registrieren" onclick="window.location.href='index.php?page=users&action=registrierung'" />
         </div>
     </div>
 </div>

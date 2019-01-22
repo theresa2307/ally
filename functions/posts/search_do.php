@@ -15,6 +15,7 @@
     if($statement->rowCount() > 0) { //wird geschaut, ob er was in der db gefunden hat, rowcount->anzahl der spalten, wenn er was gefunden hat >0
 
         while ($userdb = $statement->fetchObject()) { // alles was gefunden wurde, wird ausgegeben
+            echo "<a href='?page=profile&user=$userdb->username'><img src='./functions/profil/uploads/files/$userdb->datei'/></a>";
             echo '<a href="?page=profile&user=' . $userdb->username . '">' . $userdb->username . '</a>';
             echo "<br>";
         }
