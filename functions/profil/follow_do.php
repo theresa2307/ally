@@ -8,6 +8,6 @@ $db = new PDO($host, $user, $password); //fügt mein nutzername in die db (logge
 $statement = $db->prepare("INSERT INTO follower (username, follows) VALUES (:username, :follows)"); //vorbereitet, : bedeutet platzhalter
 $result = $statement->execute(array('username' => $logged_user, 'follows' => $follows)); //ausgeführt
 $db = null; // db ist weg
-header ('Location: ../../index.php')
+header("Location: ../../index.php?page=profile&user=$follows");
 	
 ?>
