@@ -42,7 +42,7 @@ $logged_user = $_SESSION['username'];
 
 <div id="content">
     <?php
-    if (isset($_GET['q'])){ //suche, get-> dass man NUR den findet, den man sucht
+    if (isset($_GET['q'])){ //suche, get-> dass man NUR den findet, den man sucht, q -> abfragen
         include('./functions/posts/search_do.php');
     }elseif (!isset($logged_user)) {
         switch ($_GET["page"]) {

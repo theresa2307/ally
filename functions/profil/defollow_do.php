@@ -10,5 +10,4 @@ $result = $statement->execute();
 $db = null;
 header("Location: ../../index.php?page=profile&user=$defollow");
 
-
 ?>
