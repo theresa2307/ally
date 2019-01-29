@@ -1,0 +1,105 @@
+#post_form{ /*Formular zum Posten*/
+	width:100%;
+	max-width: 1200px;
+	background-color: #888;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#post_ueberschrift{
+	padding-left:2.5%; /*innerer abstand*/
+	padding-top:2.5%;
+}
+
+#textarea_titel{
+	height:35px;
+	width:40%;
+	margin-left:2.5%;
+	text-decoration: none; /*unterstrichen wird entfernt*/
+	border: none; /*kein rahmen*/
+}
+
+#textarea{
+	height:100px;
+	max-height:200px;
+	width:94.5%;
+	max-width:1071.600px;
+	margin-top: 1%;
+	margin-left:2.5%;
+	margin-right: 2.5%;
+	text-decoration: none;
+	border: none;
+}
+
+#button_datei_uplaod{
+	height:30px;
+	width:25%;
+	background-color: #E70D11;
+	margin-top: 0.7%;
+	margin-left:2.5%;
+	text-decoration: none;
+	border: none;
+	
+}
+
+#button_hochladen{
+	height:25px;
+	width:25%;
+	margin-top: 0.5%;
+	margin-left:2.5%;
+	margin-bottom: 2.5%;
+	text-decoration: none;
+	border: none;
+}
+
+input::placeholder { /*platzhalter in der formularzeile*/
+  padding:5px;
+}
+label {
+  padding:5px;
+}
+
+@media (min-width: 768px) and (max-width: 1024px){ /*responsiv von bis, zb. breite wird dann nur für die breite, die oben angegeben ist, ersetzt*/
+#textarea_titel{
+	width:95%;
+	margin-right: 2.5%;
+	max-width: 1071.600px;
+}
+}
+
+@media (min-width: 480px) and (max-width: 768px){
+#content_box{
+	margin-top:-30px!important;/* important= hohe priorität*/
+	
+}
+
+#textarea_titel{
+	width:95%;
+	margin-right: 2.5%;
+	max-width: 1071.600px;
+}
+
+#textarea{
+	width:94.3%;
+	height:200px;
+	max-height:300px;
+}
+}
+
+@media (max-width: 480px){
+#content_box{
+	margin-top:-30px!important;
+}
+	
+#textarea_titel{
+	width:95%;
+	margin-right: 2.5%;
+	max-width: 1071.600px;
+}
+
+#textarea{
+	width:93.3%;
+	height:200px;
+	max-height:300px;
+}
+}

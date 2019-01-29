@@ -1,0 +1,50 @@
+#profil_form{
+	width:100%;
+	max-width: 1200px;
+	background-color: #D2E100;
+	margin-left: auto;
+	margin-right: auto;
+	
+}
+
+#profil_username{
+	height:35px;
+	width:40%;
+	margin-left:2.5%;
+	text-decoration: none;
+	border: none;
+
+}
+
+#profil_bio{
+	height:100px;
+	max-height:200px;
+	width:95%;
+	max-width:1071.600px;
+	margin-top: 1%;
+	margin-left:2.5%;
+	margin-right: 2.5%;
+	text-decoration: none;
+	border: none;
+}
+
+#profil_datei_upload{
+	height:30px;
+	width:25%;
+	background-color: #E70D11;
+	margin-top: 0.7%;
+	margin-left:2.5% !important;
+	text-decoration: none;
+	border: none;
+	
+}
+
+#profil_button_speichern{
+	height:30px;
+	width:25%;
+	margin-top: 0.5%;
+	margin-left:2.5% !important;
+	margin-bottom: 2.5%;
+	text-decoration: none;
+	border: none;
+}
