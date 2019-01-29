@@ -23,8 +23,8 @@ body{
 	background-color:#111;
 	font-family: 'Pacifico', cursive;
     font-size:50px;
-	line-height:80px;
-	display:none;
+	line-height:80px; /*die zeilenhöhe eines elements*/
+	display:none; /*blendet element aus*/
 }
 
 #header_content{
@@ -190,7 +190,7 @@ a{
 		overflow: hidden;
 		padding: 0 10px 0 10px;
 		background: #111;
-		text-align: left;
+		text-align: left; /*wo der text steht, links,rechts,zentriert*/
 	}
 
 	.navigation > ul > li {
@@ -218,7 +218,7 @@ a{
 	}
 	
 #logo_mobil{
-		display:block;
+		display:block; /*blendet element ein*/
 	}
 
 #header_content{
@@ -229,7 +229,7 @@ a{
 		margin-left:3.5%;
 		font-size:50px;
 		line-height:72px;
-	display:none;
+		display:none;
 	}
 
 #suchform{
@@ -249,7 +249,7 @@ a{
 	}
 
 	.navigation{
-		float:right;
+		float:right; /**/
 		width:10%;
 		height:40px;
 		margin-top:25px;
