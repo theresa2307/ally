@@ -25,16 +25,17 @@
     while ($zeile=$query->fetchObject()){ //alles was in der db steht, alle post werden ausgelesen, was oben gesucht wird bei query
 
         echo "<div class='post_box'>";
+        echo "<div class='post_titel'>";
 
-
-        /* HIER KOMMT DAS PROFILBILD HIN */
-
-
-
-        echo "<div class='post_titel'><a class='user_link' href='?page=profile&user=$zeile->username'>$zeile->username</a>: <b>$zeile->titel</b><br></div>"; //titel, nutzername wird angezeigt und nutzername wird verlinkt auf profil
-        /*if ($zeile2->username == $zeile->username and (strlen($zeile2->datei)>1)) { //profilbild wird ausgelesen vom profilverfasser
+        if ($zeile2->username == $zeile->username and (strlen($zeile2->datei)>1)) { //profilbild wird ausgelesen vom profilverfasser
             echo "<a href='?page=profile&user=$zeile->username'><img style='width:50px;' src='./functions/profil/uploads/files/$zeile2->datei'/></a>"; //bild wird angezeigt und verlinkt
-        }*/
+        }
+
+
+        echo "<a class='user_link' href='?page=profile&user=$zeile->username'>$zeile->username</a>: <b>$zeile->titel</b><br></div>"; //titel, nutzername wird angezeigt und nutzername wird verlinkt auf profil
+
+
+
         if (strlen($zeile->datei)>1) { //bild vom post wird ausgelesen
             echo "<div class='post_pic'><img src='./functions/posts/uploads/files/$zeile->datei'/></div><br>";
         }
