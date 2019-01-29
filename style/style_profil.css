@@ -1,12 +1,130 @@
-#content{
-	width:100%;
-	max-width:1200px;
+#content_box{
+	width:94%;
 	height:auto;
-	background-color:#555;
-	margin-left:auto;
-	margin-right:auto;
+	height:100%!important;
+	max-width:1200px;
 	font-family: 'Montserrat', sans-serif;
 	font-size:14px;
+	padding:3%;
 }
+#profil_ueberschrift{
+	padding-left:2.5%;
+	padding-top:2.5%;
+}
+
+#profil_profil{
+	width:100%;
+	max-width: 1200px;
+	background-color: #888;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+h2{
+	margin-top: 0px;
+	margin-left:0px;
+}
+#profil_username{
+	float:left;
+	width:50%;
+	padding-left:2.5%;
+	padding-top:2.5%;
+}
+
+#profil_bearbeiten{
+	float:left;
+	text-align: right;
+	width:40%;
+}
+
+#profil_pic{
+	width:40%;
+	margin-left: 5%!important;
+	height:auto;
+	background-color: #E00003;
+	clear: both;
+	margin:0px;
+	padding:0px;
+}
+
+img{
+	width:100%;
+	height:auto;
+	float:left;
+}
+
+#profil_text{
+	width:40%;
+	hight:auto;
+	margin-top:0px;
+	margin-left: 10%;
+	margin-right: 5%;
+	float:left;
 	
+}
+
+#folgen{
+	background-color:#980002;
+	width:20%;
+	margin:2.5%;
+	height:35px;
+	text-decoration: none;
+	float:right;
+	border:none;
+}
+
+#entfolgen{
+	background-color:#006515;
+	widht:20%;
+	margin:2.5%;
+	height:35px;
+	text-decoration: none;
+	float:right;
+	border:none;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+	#content_box{
+	margin-top:-30px !important;
+}
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+	#content_box{
+	margin-top:-30px !important;
+}
+	#profil_profil{
+	margin-top: 80px !important;
+	}
+	#folgen{
+		margin-right: 5px;
+		margin-top:5px;
+		width:30%;
+	}
+	#entfolgen{
+		margin-right: 5px;
+		margin-top:5px;
+		width:30%;
+	}
+}
+
+@media (max-width: 480px) {
+	#content_box{
+	margin-top:-30px !important;
+}
+	#profil_profil{
+	margin-top: 80px !important;
+	}
+	
+	#folgen{
+		margin-right: 5px;
+		margin-top:5px;
+		width:30%;
+	}
+	#entfolgen{
+		margin-right: 5px;
+		margin-top:5px;
+		width:30%;
+	}
+}
 	

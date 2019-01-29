@@ -1,7 +1,7 @@
 body{
 	padding:0px;
 	margin:0px;
-	background-color:#444;
+	background-color:#E3E3E3;
 }
 
 #header{
@@ -12,6 +12,21 @@ body{
 	background-color:#111;
 }
 
+#logo_mobil{
+	width:100%;
+	height:80px;
+	color:#FFF;
+	max-width:1200px;
+	margin-left:auto;
+	text-align: center;
+	margin-right:auto;
+	background-color:#111;
+	font-family: 'Pacifico', cursive;
+    font-size:50px;
+	line-height:80px;
+	display:none;
+}
+
 #header_content{
 	width:100%;
 	max-width:1200px;
@@ -20,6 +35,7 @@ body{
 	margin-right:auto;
 	background-color:#111;
 }
+
 #logo{
 	float:left;
 	width: 10%;
@@ -30,21 +46,24 @@ body{
     color: #FFFFFF;
     text-align: left;
 	line-height:100px;
+	margin-left:10px;
 }
 
 #suchform{
 	float:left;
-	width:35%;
+	width:36%;
 	height:120px;
-	margin-left:10%;
+	margin-top:0px;
+	margin-left:5%;
 	background-color:#111;
 }
 
 #suchbegriff{
 	float:left;
-	width:67%;
+	width:70%;
 	height:35px;
 	margin-top:40px;
+	margin-left:50px;
 	background-color:#FFF;
 	padding-left:3%;
 	font-family: 'Montserrat', sans-serif;
@@ -67,17 +86,16 @@ body{
   background-color: RoyalBlue;
 }
 	
-	
-	
-#navigation{
+.navigation{
 	float:right;
-	width:40%;
+	width:47%;
 	height:50px;
-	line-height:40px;
-	text-align:right;
-	background-color:#111;
-	margin-left:5%;
 	margin-top:40px;
+	margin-right: 10px;
+}
+
+.navigation a:hover{
+	background-color:#666;
 }
 
 ul, li
@@ -101,11 +119,271 @@ a{
 	width:100%;
 	max-width:1200px;
 	height:auto;
-	background-color:#555;
 	margin-left:auto;
 	margin-right:auto;
 	margin-top:120px;
 	font-family: 'Montserrat', sans-serif;
 	font-size:14px;
 }
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+	#header{
+		height:90px;
+	}
+
+	#header_content{
+		height:90px;
+	}
+	#logo{
+		height:90px;
+		margin-left:3.5%;
+		font-size:50px;
+		line-height:72px;
+	}
+
+	#suchform{
+		float:left;
+		width:50%;
+		height:90px;
+		margin-top:0px;
+		margin-left:7%;
+		background-color:#111;
+	}
+
+	#suchbegriff{
+		margin-top:25px;
+	}
+
+	#suchen_button{
+		margin-top:25px !important;
+	}
+
+	.navigation{
+		float:right;
+		width:10%;
+		height:40px;
+		margin-top:25px;
+		margin-right: 1.5%;
+		color:#FFF;
+		text-align: right;
+	}
+
+	.navigation ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.navigation > ul > li {
+	}
+
+	.navigation > ul a {
+		display: block;
+		white-space: nowrap;
+		padding: 10px;
+		background: #111;
+	}
+
+	.navigation > ul {
+		float: right;
+		overflow: hidden;
+		padding: 0 10px 0 10px;
+		background: #111;
+		text-align: left;
+	}
+
+	.navigation > ul > li {
+		display: none;
+		color:#FFF;
+	}
+
+	.navigation > ul:hover li {
+		display: block;
+	}
+
+	.navigation > ul::before {
+		display: block;
+		content: "MENÜ";
+		padding: 10px;
+		text-align: right !important;
+	}
+}
+
 	
+	
+@media (min-width: 480px) and (max-width: 768px) {
+#header{
+		height:90px;
+	}
+	
+#logo_mobil{
+		display:block;
+	}
+
+#header_content{
+		height:90px;
+	}
+#logo{
+		height:90px;
+		margin-left:3.5%;
+		font-size:50px;
+		line-height:72px;
+	display:none;
+	}
+
+#suchform{
+		width:59%;
+		height:90px;
+		margin-left: 1%;
+	}
+
+
+	#suchbegriff{
+		margin-top:25px;
+		margin-left:10px;
+	}
+
+	#suchen_button{
+		margin-top:25px !important;
+	}
+
+	.navigation{
+		float:right;
+		width:10%;
+		height:40px;
+		margin-top:25px;
+		margin-right: 1.5%;
+		color:#FFF;
+		text-align: right;
+	}
+
+	.navigation ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.navigation > ul > li {
+	}
+
+	.navigation > ul a {
+		display: block;
+		white-space: nowrap;
+		padding: 10px;
+		background: #111;
+	}
+
+	.navigation > ul {
+		float: right;
+		overflow: hidden;
+		padding: 0 10px 0 10px;
+		background: #111;
+		text-align: left;
+	}
+
+	.navigation > ul > li {
+		display: none;
+		color:#FFF;
+	}
+
+	.navigation > ul:hover li {
+		display: block;
+	}
+
+	.navigation > ul::before {
+		display: block;
+		content: "MENÜ";
+		padding: 10px;
+		text-align: right !important;
+	}
+}
+	
+@media (max-width: 480px) {
+#header{
+		height:90px;
+	}
+
+#logo_mobil{
+		display:block;
+	}
+	
+	#header_content{
+		height:90px;
+	}
+	#logo{
+		height:90px;
+		margin-left:3.5%;
+		font-size:50px;
+		line-height:72px;
+		display:none;
+	}
+
+	#suchform{
+		float:left;
+		width:59%;
+		height:90px;
+		margin-top:0px;
+		margin-left:1%;
+		background-color:#111;
+	}
+
+	#suchbegriff{
+		margin-top:25px;
+		margin-left:10px;
+	}
+
+	#suchen_button{
+		margin-top:25px !important;
+	}
+
+	.navigation{
+		float:right;
+		width:10%;
+		height:40px;
+		margin-top:25px;
+		margin-right: 1.5%;
+		color:#FFF;
+		text-align: right;
+	}
+
+	.navigation ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.navigation > ul > li {
+	}
+
+	.navigation > ul a {
+		display: block;
+		white-space: nowrap;
+		padding: 10px;
+		background: #111;
+	}
+
+	.navigation > ul {
+		float: right;
+		overflow: hidden;
+		padding: 0 10px 0 10px;
+		background: #111;
+		text-align: left;
+	}
+
+	.navigation > ul > li {
+		display: none;
+		color:#FFF;
+	}
+
+	.navigation > ul:hover li {
+		display: block;
+	}
+
+	.navigation > ul::before {
+		display: block;
+		content: "MENÜ";
+		padding: 10px;
+		text-align: right !important;
+	}
+}

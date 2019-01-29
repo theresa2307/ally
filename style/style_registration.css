@@ -11,11 +11,11 @@ body{
 
 #loginbox{
     width:25%;
-    min-width:320px;
+    min-width:350px;
     height:450px;
     margin-left: auto;
     margin-right:auto;
-    margin-top:10%;
+    margin-top:15%;
     margin-bottom:10%;
 }
 
@@ -143,7 +143,7 @@ label {
 #loginfooter{
     width:100%;
     height:60px;
-    background-color:#333;
+    background-color:#111;
     border-bottom-left-radius: 40px;
     border-bottom-right-radius: 40px;
 }
@@ -184,26 +184,238 @@ label {
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-	body {
-		background-image: none;
-		background: #222;
+	body{
+	width:100%;
+	height:100%;
+	background-image: url("../pics/hintergrund_login_2.png");
+	padding: 0;
+	margin: 0;
+}
+
+#loginbox{
+    width:100%;
+    min-width:none;
+    height:auto;
+    margin-left: none;
+    margin-right:none;
+    margin-top: 0px !important;
+    margin-bottom:none;
+}
+
+#loginheader{
+    width:100%;
+    height:200px;
+    background-color:#111;
+    font-family: 'Pacifico', cursive;
+    font-size:120px;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 150px;
+    margin-bottom: 0px;
+	margin-top:-120px;
+    border-top-right-radius: 0px;
+    border-top-left-radius:0px;
+
+}
+	
+#login{
+    width:100%;
+    height:auto;
+    background:none;
+}
+
+#ueberschrift{
+    height:70px;
+    width:100%;
+    padding-top: 20px;
+    padding-left: 10%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    color: #E2E2E2;
+
+}
+
+#linie_anfang {
+    height:2px;
+    width:90%;
+    background-color: #E2E2E2;
+    margin-left: auto;
+    margin-right:auto;
+}
+
+#formular{
+    width:100%;
+}
+
+#email{
+    height:70px;
+    width:79%;
+    margin-top:20px;
+    margin-left:10%;
+    margin-right:10%;
+    background-color:#FFF;
+    text-align: left;
+    line-height: 70px;
+    top:40px;
+    padding-left: 1%;
+    color:#000;
+	font-size:30px;
+}
+
+#username{
+    height:70px;
+    width:79%;
+    margin-top:20px;
+    margin-left:10%;
+    margin-right:10%;
+    background-color:#FFF;
+    text-align: left;
+    line-height: 70px;
+    top:40px;
+    padding-left: 1%;
+    color:#000;
+	font-size:30px;
+}
+
+#passwort{
+   height:70px;
+    width:79%;
+    margin-top:20px;
+    margin-left:10%;
+    margin-right:10%;
+    background-color:#FFF;
+    text-align: left;
+    line-height: 70px;
+    top:40px;
+    padding-left: 1%;
+    color:#000;
+	font-size:30px;
+}
+
+#passwort_wiederholen{
+   height:70px;
+    width:79%;
+    margin-top:20px;
+    margin-left:10%;
+    margin-right:10%;
+    background-color:#FFF;
+    text-align: left;
+    line-height: 70px;
+    top:40px;
+    padding-left: 1%;
+    color:#000;
+	font-size:30px;
+}
+
+input::placeholder {
+    color:#5E6E66;
+}
+label {
+    color:#5E6E66;
+}
+
+
+.button{
+    height:100px;
+	width:80%;
+	margin-top:35px;
+	margin-left:10%;
+	margin-right:10%;
+	background-color: #333;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 30px;
+	color:#E2E2E2;
+	border: none;
+}
+
+#linie_ende {
+    height:2px;
+    width:90%;
+    background-color: #E2E2E2;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right:auto;
+}
+
+#loginfooter{
+    width:100%;
+    height:200px;
+    background-color:#111;
+	position:fixed;
+	margin-top: 33px;
+	margin-bottom: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+	bottom: 0;
+}
+
+#loginfooter_text {
+	width:80%;
+	height:35px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 30px;
+	color: #E2E2E2;
+	text-align: left;
+	line-height: 35px;
+	padding-left:10%;
+	color:#E2E2E2;
+	float:left;
+	text-align: center;
+	margin-top:33px;
+	margin-left: auto;
+	margin-right:auto;
+	float:left;
+	
+	}
+
+#loginfooter_button {
+	width: 100%;
+		height: 70px;
+		font-family: 'Montserrat', sans-serif;
+		font-size: 30px;
+		color: #E2E2E2;
+		text-align: center;
+		line-height: 40px;
+		padding-right: 0%;
+		margin-top: 20px;
+		float: left;
+}
+
+#button_login{
+    width: 80%;
+    height: 70px;
+    line-height: 70px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    color: #E2E2E2;
+    background-color: #00AE25;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+}
+}
+
+	@media (min-width: 480px) and (max-width: 768px) {
+		body {
 	}
 
 	#loginbox {
 		min-width: none;
 		width: 100%;
 		height: auto;
-		margin-top: 0%;
+		margin-top: 0px !important;
 		margin-left: none;
 		margin-right: none;
 	}
 
 	#loginheader {
-		height: 300px;
-		line-height: 250px;
+		height: 100px;
+		line-height: 80px;
 		border-top-right-radius: 0px;
 		border-top-left-radius: 0px;
-		font-size: 150px;
+		font-size: 50px;
+		margin-top:-120px;
 	}
 
 	#login {
@@ -216,103 +428,107 @@ label {
 	}
 
 	#ueberschrift {
-		height: 100px;
+		height: 30px;
 		width: 90%;
-		padding-top: 40px;
-		font-size: 70px;
+		padding-top: 15px;
+		color:#E2E2E2;
+		font-size: 30px;
 	}
+		
 	#email {
-		height: 100px;
-		line-height: 100px;
-		font-size: 40px;
-		width: 79%;
-		margin-top: 35px;
+		height: 50px;
+		line-height: 40px;
+		font-size: 14px;
+		width: 77%;
+		margin-top: 10px;
 		margin-left: 10%;
 		margin-right: 10%;
 		background-color: #FFF;
-		top: 40px;
-		padding-left: 1%;
+		top: 14px;
+		padding-left: 3%;
 		color: #000;
 	}
 
 	#username {
-		height: 100px;
-		line-height: 100px;
-		font-size: 40px;
-		width: 79%;
-		margin-top: 35px;
+		height: 50px;
+		line-height: 40px;
+		font-size: 14px;
+		width: 77%;
+		margin-top: 20px;
 		margin-left: 10%;
 		margin-right: 10%;
 		background-color: #FFF;
-		top: 40px;
-		padding-left: 1%;
+		top: 14px;
+		padding-left: 3%;
 		color: #000;
 	}
 
 	#passwort {
-		height: 100px;
-		line-height: 100px;
-		font-size: 40px;
-		width: 79%;
-		margin-top: 30px;
+		height: 50px;
+		line-height: 40px;
+		font-size: 14px;
+		width: 77%;
+		margin-top: 20px;
 		margin-left: 10%;
 		margin-right: 10%;
-		padding-left: 1%;
+		padding-left: 3%;
 		background-color: #FFF;
-		top: 50px;
+		top: 17px;
 	}
-	
+		
 	#passwort_wiederholen {
-		height: 100px;
-		line-height: 100px;
-		font-size: 40px;
-		width: 79%;
-		margin-top: 30px;
+		height: 50px;
+		line-height: 40px;
+		font-size: 14px;
+		width: 77%;
+		margin-top: 20px;
 		margin-left: 10%;
 		margin-right: 10%;
-		padding-left: 1%;
+		padding-left: 3%;
 		background-color: #FFF;
-		top: 50px;
+		top: 17px;
 	}
+
 
 	input::placeholder {
 		padding: 1px;
-		font-size: 40px;
+		font-size: 14px;
 	}
 
 	label {
 		padding: 1px;
 		line-height: 100px;
-		font-size: 40px;
+		font-size: 14px;
 	}
 
 	.button {
-		height: 100px;
+		height: 50px;
 		width: 81%;
-		margin-top: 35px;
-		font-size: 40px;
+		margin-top: 25px;
+		font-size: 14px;
 	}
 
 	#loginfooter {
 		width: 100%;
-		height: 300px;
+		height: 100px;
+		position: absolute;
 		background-color: #111;
+		margin-top: 12px;
 		margin-bottom: 0px;
 		border-bottom-left-radius: 0px;
 		border-bottom-right-radius: 0px;
-		position: absolute;
 		bottom: 0;
 	}
 
 	#loginfooter_text {
 		width: 80%;
-		height: 50px;
-		line-height: 50px;
+		height: 15px;
+		line-height: 15px;
 		font-family: 'Montserrat', sans-serif;
-		font-size: 40px;
+		font-size: 14px;
 		color: #E2E2E2;
 		text-align: center;
-		margin-top: 50px;
+		margin-top: 17px;
 		padding-left: none;
 		margin-left: auto;
 		margin-right: auto;
@@ -321,23 +537,23 @@ label {
 
 	#loginfooter_button {
 		width: 100%;
-		height: 100px;
+		height: 50px;
 		font-family: 'Montserrat', sans-serif;
-		font-size: 40px;
+		font-size: 14px;
 		color: #E2E2E2;
 		text-align: center;
-		line-height: 60px;
+		line-height: 21px;
 		padding-right: 0%;
-		margin-top: 30px;
+		margin-top: 10px;
 		float: left;
 	}
 
 	#button_login {
 		width: 80%;
-		height: 100px;
-		line-height: 100px;
+		height: 50px;
+		line-height: 50px;
 		font-family: 'Montserrat', sans-serif;
-		font-size: 40px;
+		font-size: 14px;
 		color: #E2E2E2;
 		background-color: #00AE25;
 		margin-left: auto;
@@ -346,17 +562,8 @@ label {
 	}
 
 	input {
-		-webkit-appearance: none;
-		-moz-appearance: none;
+		webkit-appearance: none;
+		moz-appearance: none;
 		appearance: none;
 	}
-
-	@media (min-width: 480px) and (max-width: 768px) {
-		body {
-			background-image: none;
-			background: #FFF;
-		}
-	}
-	@media (max-width: 480px) {
-	}  }
-
+}
