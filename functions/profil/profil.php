@@ -3,7 +3,7 @@
     <link rel="stylesheet" type="text/css" href="style/style_profil.css" />
 </head>
 <body>
-<div id="content_box">
+<div class="content_box">
     <?php
     $get_user = $_GET['user']; //user=username wird übernommen und in eine variable gespeichert, get-user -> profil auf dem man grrade ist
     include ('database.php');
@@ -26,34 +26,35 @@
         echo "<input type='hidden' name='follows' value='$get_user'>";
         echo "<input id='entfolgen' type='submit' value='Nutzer folgen'>";
     }
-    ?>
-    <div id="profil_profil">
-        <?php
-        echo "<div id='profil_username'><h2>$get_user</h2></div>";
+	?>
+	<div class="profil_header">
+	<?php
+	 echo "<div class='profil_header_username'><h2>$get_user</h2></div>";
 
-        $sql = "SELECT * FROM profiles WHERE username LIKE '".$get_user."'";
-        $statement = $db->prepare($sql);
-        $statement->execute();
-
-        if ($logged_user == $get_user) { //logged_user-> eingeloggte user
-            echo "<div id='profil_bearbeiten'><a href='?page=profile&action=edit'>Profil bearbeiten</a></div>"; //wenn dem so ist, dann kann man das profil bearbeiten (sein eigenes)
-        }
-
-        while ($zeile = $statement->fetchObject()) { //liest so lange aus bis nichts mehr gibt
+    $sql = "SELECT * FROM profiles WHERE username LIKE '".$get_user."'";
+    $statement = $db->prepare($sql);
+    $statement->execute();
+	
+	if ($logged_user == $get_user) { //logged_user-> eingeloggte user
+        echo "<div class='profil_header_profil_bearbeiten'><a href='?page=profile&action=edit'>Profil bearbeiten</a></div></div>"; //wenn dem so ist, dann kann man das profil bearbeiten (sein eigenes)
+    }
+		
+	echo "<div class='profil_body'>";
+    while ($zeile = $statement->fetchObject()) { //liest so lange aus bis nichts mehr gibt
         if(strlen($zeile->datei)>1) { //profilbild
-            echo  "<div id='profil_pic'><img src='./functions/profil/uploads/files/$zeile->datei'/></div>"; //profilbild
+            echo  "<div class='profil_body_pic'><img src='./functions/profil/uploads/files/$zeile->datei'/></div>"; //profilbild
         }
-        ?>
-        <div id="profil_text">
-            <?php
+		?>
+	<div class="profil_body_text">
+	<?php
 
-            echo "Name: $zeile->name <br>";
-            echo "Bio: $zeile->bio<br>"; //profilname und Bio wird angegeben, ausgegeben
-            }
-
-            ?>
-        </div>
-    </div>
+        echo "<b>Name:</b> $zeile->name <br>";
+        echo "<b>Bio:</b> $zeile->bio<br>"; //profilname und Bio wird angegeben, ausgegeben
+    }
+	
+    ?>
+	</div>
+	</div>
 </div>
 </body>
 </html>
