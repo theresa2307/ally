@@ -1,4 +1,91 @@
-#profil_form{
+.content_box{
+	width:100%;
+	height:auto;
+	max-width:1200px;
+}
+
+.profil_form_header{
+	width:100%;
+	height:64px !important;
+	margin-top:10px;
+	background:#999;
+	border-left: 1px solid #999;
+	border-right: 1px solid #999;
+	border-top: 1px solid #999;
+	float:left;
+}
+
+.profil_form_header_title{
+	width:30%;
+	height:64px;
+	margin-left: 20px;
+	line-height:30px;
+	text-align: left;
+	float:left;
+}
+
+.profil_form_body{
+	width:100%;
+	height:auto;
+	background:#FFF;
+	border-left: 1px solid #999;
+	border-right: 1px solid #999;
+	border-bottom: 1px solid #999;
+	float:left;
+}
+
+.profil_form_body_username{
+	width:96%;
+	max-width:1158px;
+	height:35px;
+	margin-left:20px;
+	margin-right:20px;;
+	margin-top:10px;
+	padding-left:7px;
+	font-family: 'Montserrat', sans-serif;
+	font-size:14px;
+	float:left;
+}
+
+.profil_form_body_bio{
+	width:95.8%;
+	max-width:1156px;
+	height:100px;
+	max-height:100px;
+	margin-left:20px;
+	margin-right:20px;
+	margin-top:10px;
+	padding-left:7px;
+	padding-top:7px;
+	font-family: 'Montserrat', sans-serif;
+	font-size:14px;
+	float:left;
+}
+
+.profil_form_body_upload{
+	width:100%;
+	height:35px;
+	margin-left: 20px;
+	margin-top: 10px;
+	margin-right:20px;
+	font-family: 'Montserrat', sans-serif;
+	font-size:14px;
+	float:left;
+}
+
+.profil_form_body_speichern{
+	width:20%;
+	min-width:200px;
+	height:35px;
+	margin-left: 20px;
+	margin-top: 10px;
+	margin-bottom:20px;
+	font-family: 'Montserrat', sans-serif;
+	font-size:14px;
+	cursor: pointer;
+	float:left;
+}
+/*#profil_form{
 	width:100%;
 	max-width: 1200px;
 	background-color: #D2E100;
@@ -47,4 +134,4 @@
 	margin-bottom: 2.5%;
 	text-decoration: none;
 	border: none;
-}
+}*/

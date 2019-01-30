@@ -31,8 +31,8 @@
 
             if ($zeile2->username == $zeile->username and (strlen($zeile2->datei)>1)) { //profilbild wird ausgelesen vom profilverfasser
                echo "<a class='post_header_userpic' href='?page=profile&user=$zeile->username'><img style='width:50px; height:50px; border-radius:100%;' src='./functions/profil/uploads/files/$zeile2->datei'/></a>"; //bild wird angezeigt und verlinkt
-           }
-			
+           } 
+		
 			echo "<a class='post_header_username' href='?page=profile&user=$zeile->username'>$zeile->username</a>";
 			
 			

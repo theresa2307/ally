@@ -44,8 +44,8 @@
 }
 
 .profil_body_pic{
-	width:45% !important;
-	height:auto;
+	width:250px;
+	height:250px;
 	margin-left:20px;
 	margin-top:20px;
 	margin-bottom:20px;
@@ -54,6 +54,7 @@
 
 .profil_body_pic > img{
 	width:100%;
+	border-radius:100%;
 }
 
 .profil_body_text{

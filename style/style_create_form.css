@@ -1,4 +1,93 @@
-#post_form{ /*Formular zum Posten*/
+.content_box{
+	width:100%;
+	height:auto;
+	max-width:1200px;
+}
+
+.post_form_header{
+	width:100%;
+	height:64px !important;
+	margin-top:10px;
+	background:#999;
+	border-left: 1px solid #999;
+	border-right: 1px solid #999;
+	border-top: 1px solid #999;
+	float:left;
+}
+
+.post_form_header_title{
+	width:30%;
+	height:64px;
+	margin-left: 20px;
+	line-height:30px;
+	text-align: left;
+	float:left;
+}
+
+.post_form_body{
+	width:100%;
+	height:auto;
+	background:#FFF;
+	border-left: 1px solid #999;
+	border-right: 1px solid #999;
+	border-bottom: 1px solid #999;
+	float:left;
+}
+
+.post_form_body_title{
+	width:96%;
+	max-width:1158px;
+	height:35px;
+	margin-left:20px;
+	margin-right:20px;;
+	margin-top:10px;
+	padding-left:7px;
+	font-family: 'Montserrat', sans-serif;
+	font-size:14px;
+	float:left;
+}
+
+.post_form_body_text{
+	width:95.8%;
+	max-width:1156px;
+	height:100px;
+	max-height:100px;
+	margin-left:20px;
+	margin-right:20px;
+	margin-top:10px;
+	padding-left:7px;
+	padding-top:7px;
+	font-family: 'Montserrat', sans-serif;
+	font-size:14px;
+	float:left;
+}
+
+.post_form_body_upload{
+	width:100%;
+	height:35px;
+	margin-left: 20px;
+	margin-top: 10px;
+	margin-right:20px;
+	font-family: 'Montserrat', sans-serif;
+	font-size:14px;
+	float:left;
+}
+
+.post_form_body_posten{
+	width:20%;
+	min-width:200px;
+	height:35px;
+	margin-left: 20px;
+	margin-top: 10px;
+	margin-bottom:20px;
+	font-family: 'Montserrat', sans-serif;
+	font-size:14px;
+	cursor: pointer;
+	float:left;
+}
+
+
+/*#post_form{
 	width:100%;
 	max-width: 1200px;
 	background-color: #888;
@@ -7,16 +96,17 @@
 }
 
 #post_ueberschrift{
-	padding-left:2.5%; /*innerer abstand*/
+	padding-left:2.5%;
 	padding-top:2.5%;
 }
 
 #textarea_titel{
 	height:35px;
-	width:40%;
+	width:94.8%;
 	margin-left:2.5%;
-	text-decoration: none; /*unterstrichen wird entfernt*/
-	border: none; /*kein rahmen*/
+	margin-right:2.5%;
+	text-decoration:none;
+	border: none;
 }
 
 #textarea{
@@ -52,14 +142,14 @@
 	border: none;
 }
 
-input::placeholder { /*platzhalter in der formularzeile*/
+input::placeholder {
   padding:5px;
 }
 label {
   padding:5px;
 }
 
-@media (min-width: 768px) and (max-width: 1024px){ /*responsiv von bis, zb. breite wird dann nur für die breite, die oben angegeben ist, ersetzt*/
+@media (min-width: 768px) and (max-width: 1024px){
 #textarea_titel{
 	width:95%;
 	margin-right: 2.5%;
@@ -69,7 +159,7 @@ label {
 
 @media (min-width: 480px) and (max-width: 768px){
 #content_box{
-	margin-top:-30px!important;/* important= hohe priorität*/
+	margin-top:-30px!important;
 	
 }
 
@@ -102,4 +192,4 @@ label {
 	height:200px;
 	max-height:300px;
 }
-}
+}*/
