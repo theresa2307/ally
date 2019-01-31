@@ -1,4 +1,4 @@
-<html>
+﻿<html>
     <head>
     <link rel="stylesheet" type="text/css" href="style/style_posts.css" />
     </head>
@@ -19,17 +19,17 @@
         $query = $pdo->prepare ("SELECT * FROM posts WHERE username IN ('$follower_array2') OR username= :username ORDER BY datum DESC"); //nach datum sortiert
         $query->execute(array('username' => $logged_user)); // liest alles aus post aus der db
         $query2 = $pdo->prepare ("SELECT * FROM profiles WHERE username IN ('$follower_array2') OR username= :username"); //
-        $query2->execute(array('username' => $logged_user)); //liest alle saus der db spalte des nutzername oder wo der nutezrname gleich dem nutezrname ist
-        $zeile2=$query2->fetchObject();		
-
+        $query2->execute(array('username' => $logged_user)); //liest alle saus der db spalte des nutzername oder wo der nutezrname gleich dem nutezrname ist	
+		$zeile2=$query2->fetchObject();
+			
         while ($zeile=$query->fetchObject()){ //alles was in der db steht, alle post werden ausgelesen, was oben gesucht wird bei query
 		
 			/*echo "<div class='post_box'>";*/
 
 			echo "<div class='post_header' style='height:50px; background-color:#888;'>";
 
-
-            if ($zeile2->username == $zeile->username and (strlen($zeile2->datei)>1)) { //profilbild wird ausgelesen vom profilverfasser
+			
+            if (($zeile2->username == $zeile->username) and (strlen($zeile2->datei)>1)) { //profilbild wird ausgelesen vom profilverfasser
                echo "<a class='post_header_userpic' href='?page=profile&user=$zeile->username'><img style='width:50px; height:50px; border-radius:100%;' src='./functions/profil/uploads/files/$zeile2->datei'/></a>"; //bild wird angezeigt und verlinkt
            } 
 		
