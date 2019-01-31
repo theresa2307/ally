@@ -17,7 +17,7 @@
             <input type="text" id="username" name="username" placeholder="Username" required><br>
             <input type="password" id="passwort" name="password" placeholder="Passwort" required><br>
             <input type="password" id="passwort_wiederholen" name="password2" placeholder="Passwort wiederholen" required><br>
-            <input type="submit" class="button" value="regestrieren">
+            <input type="submit" class="button" value="registrieren">
         </form>
     </div>
     <div id="loginfooter">
