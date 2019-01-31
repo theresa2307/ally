@@ -10,7 +10,7 @@
 
 <body>
 <div id="loginbox">
-    <div id="loginheader">ally</div>
+    <div id="loginheader"></div>
     <div id="login">
         <form action="./functions/users/login_do.php" method="post">
             <div id="ueberschrift">Login</div>

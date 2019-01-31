@@ -9,7 +9,7 @@
 <body>
 
 <div id="loginbox">
-    <div id="loginheader">ally</div>
+    <div id="loginheader"></div>
     <div id="login">
         <form action="./functions/users/registration_do.php" method="post">
             <div id="ueberschrift">Registrierung</div>

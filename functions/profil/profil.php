@@ -16,18 +16,18 @@
     $sql_follow = "SELECT * FROM follower WHERE username = '".$logged_user."' AND follows = '".$get_user."'"; // zieht sich information aus db
     $statement_follow = $db->prepare($sql_follow);
     $statement_follow->execute();
+	echo "<div class='profil_header'>";
 
     if ($statement_follow->rowCount() > 0) { // schaut, ob etwas aus der db ausgelesen wird, wenn ja dann hat man die möglichkeit dem nutzer zu entfolgen
         echo "<form action='./functions/profil/defollow_do.php' method='post'>";
         echo "<input type='hidden' name='defollow' value='$get_user'>";
-        echo "<input id='folgen' type='submit' value='Nutzer entfolgen'>";
+        echo "<input class='profil_header_folgen' type='submit' value='Nutzer entfolgen'>";
     }elseif ($logged_user !== $get_user) { // wenn nichts angezeigt wird, kann man dem nutzer folgen
         echo "<form action='./functions/profil/follow_do.php' method='post'>";
         echo "<input type='hidden' name='follows' value='$get_user'>";
-        echo "<input id='entfolgen' type='submit' value='Nutzer folgen'>";
+        echo "<input class='profil_header_entfolgen' type='submit' value='Nutzer folgen'>";
     }
 	?>
-	<div class="profil_header">
 	<?php
 	 echo "<div class='profil_header_username'><h2>$get_user</h2></div>";
 
@@ -51,9 +51,8 @@
         echo "<b>Name:</b> $zeile->name <br>";
         echo "<b>Bio:</b> $zeile->bio<br>"; //profilname und Bio wird angegeben, ausgegeben
     }
-	
+	 echo "</div>";
     ?>
-	</div>
 	</div>
 </div>
 </body>
