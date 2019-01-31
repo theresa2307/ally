@@ -216,7 +216,7 @@ label {
 	}
 
 	#loginheader {
-		height: 200px;
+		height: auto;
 		line-height: 150px;
 		border-top-right-radius: 0px;
 		border-top-left-radius: 0px;
@@ -236,7 +236,7 @@ label {
 	#ueberschrift {
 		height: 70px;
 		width: 90%;
-		padding-top: 25px;
+		padding-top: 150px;
 		color:#E2E2E2;
 		font-size: 50px;
 	}
@@ -351,7 +351,9 @@ label {
 	@media (min-width: 480px) and (max-width: 768px) {
 		body {
 	}
-
+		#logo_mobil{
+			display:none;
+		}
 	#loginbox {
 		min-width: none;
 		width: 100%;

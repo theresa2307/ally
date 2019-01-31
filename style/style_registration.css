@@ -204,7 +204,7 @@ label {
 
 #loginheader{
     width:100%;
-    height:200px;
+    height:auto;
     background-color:#111;
     font-family: 'Pacifico', cursive;
     font-size:120px;
@@ -227,7 +227,7 @@ label {
 #ueberschrift{
     height:70px;
     width:100%;
-    padding-top: 20px;
+    padding-top: 150px;
     padding-left: 10%;
     font-family: 'Montserrat', sans-serif;
     font-size: 50px;
