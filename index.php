@@ -20,24 +20,46 @@ session_start();
 $logged_user = $_SESSION['username'];
 ?>
 <div id="header">
+	<div id="logo_mobil">ally</div>
     <div id="header_content">
         <div id="logo">ally</div>
-        <div id="navigation">
-            <ul>
+		<div id="suchform">
+			<?php
+			if (isset($logged_user)) {
+			include_once('./functions/posts/search_form.php');
+			}
+			?>
+		</div>
+			<!--<div class="navigation">
+            <ul>-->
                 <?php
-                if (isset($logged_user)) {
-                    include_once('./functions/posts/search_form.php');
-                    echo "<li><a href='index.php'><i class='fas fa-home'></i> Startseite</a></li>";
+                /*if (isset($logged_user)) {
                     echo "<li><a href='?page=users&action=logout'><i class=\"fas fa-sign-out-alt\"></i> Logout</a></li>";
                     echo "<li><a href='?page=posts&action=create'><i class=\"fas fa-plus\"></i> Neuer Beitrag</a></li>";
                     echo "<li><a href='?page=profile&user=$logged_user'><i class=\"fas fa-user\"></i> Mein Profil</a></li>";
-                }
+					echo "<li><a href='index.php'><i class='fas fa-home'></i> Startseite</a></li>";
+                }*/
                 ?>
-                <!--<li><a href="?page=users&action=registrierung">Registrierung</a></li>-->
-            </ul>
-        </div>
-    </div>
-
+				
+					<nav id="nav" role="navigation">
+						<a href="#nav" title="Show Menu"><i class="fas fa-bars"></i></a>
+						<a href="#" title="Hide Menu"><i class="fas fa-bars"></i></a>
+						<ul>
+							<?php
+								if (isset($logged_user)) {
+									echo "<li><a href='?page=users&action=logout'><i class=\"fas fa-sign-out-alt\"></i> Logout</a></li>";
+									echo "<li><a href='?page=posts&action=create' aria-haspopup='true'><i class=\"fas fa-plus\"></i> Neuer Beitrag</a></li>";
+									echo "<li><a href='?page=profile&user=$logged_user' aria-haspopup='true'><i class=\"fas fa-user\"></i> Mein Profil</a></li>";
+									echo "<li><a href='index.php'><i class='fas fa-home'></i> Startseite</a></li>";
+								}
+                			?>
+						</ul>
+					</nav>
+			<!--</ul>
+			</div>-->
+		</div>
+        
+	</div>
 </div>
 
 <div id="content">
@@ -52,7 +74,8 @@ $logged_user = $_SESSION['username'];
             default:
                 include"./functions/users/login_form.php";
         }
-    }else {
+    }
+	else {
         switch ($_GET["page"]){
             case"users":
                 include "./functions/users/index.php";
