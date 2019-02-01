@@ -74,6 +74,8 @@
 	float:left;
 }
 
+
+
 .profil_body_pic{ /*Profilbild auf der Profilseite*/
 	width:250px;
 	height:250px;
@@ -101,18 +103,49 @@
 }
 
 @media (min-width: 480px) and (max-width: 768px) { /*Media Querie für Gerätebreiten von 480px bis 768px*/
+.profil_body{ /*Inhaltscontainer "Body" auf Profilseite*/
+	width:98%;
+	height:auto;
+	margin-left: 1%;
+	margin-right:1%;
+	padding-left: 2.5%;
+	padding-right:2.5%;
+	padding-top: 2.5%;
+	padding-bottom: 2.5%;
+	background:#FFF;
+	border-left: 1px solid #999;
+	border-right: 1px solid #999;
+	border-bottom: 1px solid #999;
+	box-sizing: border-box;
+	float:left;
+}
+	
 .profil_body_pic{ /*Profilbild auf der Profilseite*/
-	width:100%;
-	max-width:600px;
-	height:250px;
+	width:40%;
+	max-width:400px;
+	height:400px;
 	margin-left:auto;
 	margin-top:auto;
 	float:left;
 }
+	
+.profil_body_pic > img {
+    width: 100%;
+    border-radius: 100%;
+}
+	
 .profil_body_text{ /*Text auf der Profilseite*/
-	width:45%;
+	width:53%;
 	height:auto;
 	float:left;
+	margin-left:0%;
+	margin-right:0%;
+	margin-top:0%;
+	margin-bottom: 0%;
+	padding-left:7%;
+	padding-right:0%;
+	padding-top:0%;
+	padding-bottom:3%;
 }
 }
 
@@ -128,6 +161,39 @@
 
 .profil_header_profil_bearbeiten{ /*Button "Profil bearbeiten" auf der Profilseite*/
 	width:200px;
+}
+	
+.profil_body { /*Inhaltscontainer "Body" auf Profilseite*/
+    width: 98%;
+    height: auto;
+    margin-left: 1%;
+    margin-right: 1%;
+    background: #FFF;
+    border-left: 1px solid #999;
+    border-right: 1px solid #999;
+    border-bottom: 1px solid #999;
+    box-sizing: border-box;
+    float: left;
+}
+
+.profil_body_pic { /*Profilbild auf der Profilseite*/
+    width: 80%;
+    height: auto;
+    margin-left: 10%;
+	margin-right: 10%;
+    margin-top: 5%;
+    margin-bottom: 0%;
+    float: left;
+}
+	
+.profil_body_text { /*Text auf der Profilseite*/
+    width: 80%;
+    height: auto;
+    margin-left: 10%;
+	margin-right: 10%;
+    margin-top: 4%;
+    float: left;
+    margin-bottom: 10%;
 }
 }
 
@@ -147,142 +213,38 @@
 	text-align: left;
 	float:left;
 }
-}
-
-
-
-
-
-
-
-
-/*#content_box{
-	width:94%;
-	height:auto;
-	height:100%!important;
-	max-width:1200px;
-	font-family: 'Montserrat', sans-serif;
-	font-size:14px;
-	padding:3%;
-}
-#profil_ueberschrift{
-	padding-left:2.5%;
-	padding-top:2.5%;
-}
-
-#profil_profil{
-	width:100%;
-	max-width: 1200px;
-	background-color: #888;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-h2{
-	margin-top: 0px;
-	margin-left:0px;
-}
-#profil_username{
-	float:left;
-	width:50%;
-	padding-left:2.5%;
-	padding-top:2.5%;
-}
-
-#profil_bearbeiten{
-	float:left;
-	text-align: right;
-	width:40%;
-}
-
-#profil_pic{
-	width:40%;
-	margin-left: 5%!important;
-	height:auto;
-	background-color: #E00003;
-	clear: both;
-	margin:0px;
-	padding:0px;
-}
-
-img{
-	width:100%;
-	height:auto;
-	float:left;
-}
-
-#profil_text{
-	width:40%;
-	hight:auto;
-	margin-top:0px;
-	margin-left: 10%;
-	margin-right: 5%;
-	float:left;
 	
+.profil_body {  /*Inhaltscontainer "Body" auf Profilseite*/
+    width: 98%;
+    height: auto;
+    margin-left: 1%;
+    margin-right: 1%;
+    background: #FFF;
+    border-left: 1px solid #999;
+    border-right: 1px solid #999;
+    border-bottom: 1px solid #999;
+    box-sizing: border-box;
+    float: left;
 }
 
-#folgen{
-	background-color:#980002;
-	width:20%;
-	margin:2.5%;
-	height:35px;
-	text-decoration: none;
-	float:right;
-	border:none;
+.profil_body_pic { /*Profilbild auf der Profilseite*/
+    width: 80%;
+    height: auto;
+    margin-left: 10%;
+	margin-right: 10%;
+    margin-top: 5%;
+    margin-bottom: 0%;
+    float: left;
 }
-
-#entfolgen{
-	background-color:#006515;
-	widht:20%;
-	margin:2.5%;
-	height:35px;
-	text-decoration: none;
-	float:right;
-	border:none;
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-	#content_box{
-	margin-top:-30px !important;
-}
-}
-
-@media (min-width: 480px) and (max-width: 768px) {
-	#content_box{
-	margin-top:-30px !important;
-}
-	#profil_profil{
-	margin-top: 80px !important;
-	}
-	#folgen{
-		margin-right: 5px;
-		margin-top:5px;
-		width:30%;
-	}
-	#entfolgen{
-		margin-right: 5px;
-		margin-top:5px;
-		width:30%;
-	}
-}
-
-@media (max-width: 480px) {
-	#content_box{
-	margin-top:-30px !important;
-}
-	#profil_profil{
-	margin-top: 80px !important;
-	}
 	
-	#folgen{
-		margin-right: 5px;
-		margin-top:5px;
-		width:30%;
-	}
-	#entfolgen{
-		margin-right: 5px;
-		margin-top:5px;
-		width:30%;
-	}
-}*/
+.profil_body_text { /*Text auf der Profilseite*/
+    width: 80%;
+    height: auto;
+    margin-left: 10%;
+	margin-right: 10%;
+    margin-top: 4%;
+    float: left;
+    margin-bottom: 10%;
+}
+}
 	

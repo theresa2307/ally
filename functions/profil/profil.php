@@ -51,9 +51,8 @@
         echo "<b>Name:</b> $zeile->name <br>";
         echo "<b>Bio:</b> $zeile->bio<br>"; //profilname und Bio wird angegeben, ausgegeben
     }
-	 echo "</div>";
+	 echo "</div></div>";
     ?>
-	</div>
 </div>
 </body>
 </html>

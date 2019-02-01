@@ -1,11 +1,11 @@
-.content_box{
+.content_box{ /*Inhaltscontainer "Content" im Profilformular*/
 	width:100%;
 	height:auto;
 	max-width:1200px;
 	
 }
 
-.profil_form_header{
+.profil_form_header{ /*Inhaltscontainer "Header" im Profilformular*/
 	width:98%;
 	height:64px !important;
 	margin-top:1%;
@@ -18,7 +18,7 @@
 	float:left;
 }
 
-.profil_form_header_title{
+.profil_form_header_title{ /*Titel im Header im Profilformular*/
 	width:80%;
 	height:64px;
 	margin-left: 20px;
@@ -28,7 +28,7 @@
 }
 
 
-.profil_form_body{
+.profil_form_body{ /*Formular im Profilformular*/
 	width:98%;
 	height:auto;
 	margin-bottom:1%;
@@ -42,13 +42,13 @@
 }
 
 
-.profil_form_body_padding{
+.profil_form_body_padding{ /*innerer Abstand des Profilformulars*/
 	width:96%;
 	height: auto;
 	padding:2%;
 }
 
-.profil_form_body_username{
+.profil_form_body_username{ /* Username im Body im Profilformular*/
 	width:100%;;
 	max-width:1158px;
 	height:35px;
@@ -59,7 +59,7 @@
 	float:left;
 }
 
-.profil_form_body_bio{
+.profil_form_body_bio{ /* Bio im Body im Profilformular*/
 	width:100%;
 	max-width:1129px;
 	height:100px;
@@ -73,7 +73,7 @@
 	float:left;
 }
 
-.profil_form_body_upload{
+.profil_form_body_upload{ /* Upload Button für Bilder im Profilformular*/
 	width:100%;
 	height:23px;
 	margin-top: 1%;
@@ -83,7 +83,7 @@
 
 }
 
-.profil_form_body_speichern{
+.profil_form_body_speichern{ /* Speichern Button  im Profilformular um persönliche Daten zu speichern */
 	width:20%;
 	min-width:200px;
 	height:35px;
@@ -94,53 +94,3 @@
 	cursor: pointer;
 	float:left;
 }
-/*#profil_form{
-	width:100%;
-	max-width: 1200px;
-	background-color: #D2E100;
-	margin-left: auto;
-	margin-right: auto;
-	
-}
-
-#profil_username{
-	height:35px;
-	width:40%;
-	margin-left:2.5%;
-	text-decoration: none;
-	border: none;
-
-}
-
-#profil_bio{
-	height:100px;
-	max-height:200px;
-	width:95%;
-	max-width:1071.600px;
-	margin-top: 1%;
-	margin-left:2.5%;
-	margin-right: 2.5%;
-	text-decoration: none;
-	border: none;
-}
-
-#profil_datei_upload{
-	height:30px;
-	width:25%;
-	background-color: #E70D11;
-	margin-top: 0.7%;
-	margin-left:2.5% !important;
-	text-decoration: none;
-	border: none;
-	
-}
-
-#profil_button_speichern{
-	height:30px;
-	width:25%;
-	margin-top: 0.5%;
-	margin-left:2.5% !important;
-	margin-bottom: 2.5%;
-	text-decoration: none;
-	border: none;
-}*/

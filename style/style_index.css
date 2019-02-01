@@ -4,14 +4,14 @@ body{
 	background-color:#E3E3E3;
 }
 
-#header{
+#header{ /*Inhaltscontainer "Header"*/
 	width:100%;
 	height:auto;
 	top:0;
 	background-color:#111;
 }
 
-#logo_mobil{
+#logo_mobil{ /*Logo für kleine Geräte (Tablet, Smartphone,..)*/
 	width:100%;
 	height:80px;
 	color:#FFF;
@@ -26,7 +26,7 @@ body{
 	display:none;
 }
 
-#header_content{
+#header_content{ /*Inhaltscontainer "Header" > Abstand*/
 	width:100%;
 	max-width:1200px;
 	height:120px;
@@ -35,7 +35,7 @@ body{
 	background-color:#111;
 }
 
-#logo{
+#logo{ /*Logo für Desktop*/
 	float:left;
 	width: 10%;
 	height:120px;
@@ -48,7 +48,7 @@ body{
 	margin-left:10px;
 }
 
-#suchform{
+#suchform{ /*Suchformular*/
 	float:left;
 	width:31%;
 	height:120px;
@@ -57,7 +57,7 @@ body{
 	background-color:#111;
 }
 
-#suchbegriff{
+#suchbegriff{ /*Suchformular*/
 	float:left;
 	width:80%;
 	height:35px;
@@ -68,7 +68,7 @@ body{
 	color:#000;
 }
 
-#suchen_button{
+#suchen_button{ /*Such Button > Suchformular*/
 	float:left;
 	width:41px;
 	height:41px;
@@ -80,12 +80,12 @@ body{
 	cursor: pointer;
 }
 
-#suchen_button:hover {
+#suchen_button:hover { /*Such Button Hover > Suchformular*/
   background-color: RoyalBlue;
 }
 
 
-#nav
+#nav /*Navigation Desktop horizontal*/
 {
 	width:47%;
 	margin-top:42.5px;
@@ -94,52 +94,35 @@ body{
 	text-decoration: none;
 	list-style: none !important;
 }
-    #nav > a
+    #nav > a /*Navigation > Links*/
     {
         display: none;
 		list-style: none !important;
 		text-align: right;
     }
-    #nav li
+    #nav li /*Navigation > Listenpunkte*/
     {
         /*position: relative;*/
 		list-style: none !important;
     }
  
-    /* first level */
- 
-    #nav > ul
+    #nav > ul /*Navigation > Unsortierte Liste*/
     {
         height: 35px;
 		
     }
-        #nav > ul > li
+        #nav > ul > li /*Navigation > Unsortierte Liste > Listenpunkte*/
         {
             height: 100%;
 			float: right;
         }
 
-#nav a:hover{
+#nav a:hover{ /*Navigation > Hover*/
 	background-color:#666;
 }
-	
-/*.navigation{
-	float:right;
-	width:41%;
-	height:50px;
-	margin-top:40px;
-	margin-right: 10px;
-}
 
-ul, li
-{
-	float:right;
-	text-align:right;
-    list-style: none;
-	text-decoration: none;
-}*/
 
-a{
+a{	/*Links allegemein*/
 	text-decoration: none;
 	color:#FFF;
 	padding:7px;
@@ -148,7 +131,7 @@ a{
 	font-size:14px;
 }
 
-#content{
+#content{ /*Inhaltscontainer "Content"*/
 	width:100%;
 	max-width:1200px;
 	height:auto;
@@ -161,7 +144,7 @@ a{
 
 @media (min-width: 768px) and (max-width: 1024px) {
 	
-	#suchform{
+	#suchform{ /*Suchformular*/
 	float:left;
 	width:50%;
 	height:120px;
@@ -170,17 +153,17 @@ a{
 	background-color:#111;
 }
 
-    #nav
+    #nav /*Navigation (Dropdown)*/
     {
         position: relative;
 		width:5%;
     }
 	
-	.fa-bars:before{
+	.fa-bars:before{ /*Icon 3 Balken (Dropdown)*/
 		font-size: 30px;
     	padding-left: 3.5px;
 	}
-        #nav > a
+        #nav > a /*Navigation (Dropdown) > Links*/
         {
         }
         #nav:not( :target ) > a:first-of-type,
@@ -193,7 +176,7 @@ a{
  
     /* first level */
  
-    #nav > ul
+    #nav > ul /*Navigation (Dropdown) > Unsortierte Liste */
     {
         height: auto;
         display: none;
@@ -210,14 +193,14 @@ a{
 			margin-left:-100px;
 			text-align: center;
         }
-        #nav > ul > li
+        #nav > ul > li /*Navigation (Dropdown) > Unsortierte Liste > Listenpunkte*/
         {
             width: 100%;
             float: none;
 			height:50px;
 			line-height:50px;
         }
-	#nav a:hover{
+	#nav a:hover{ /*Navigation (Dropdown) > Hover*/
 		
 	
 }
@@ -225,25 +208,25 @@ a{
 }
 
 @media (min-width: 480px) and (max-width: 768px) {
-#header{
+#header{ /*Inhaltscontainer "Header"*/
 	width:92%;
 	height:150px;
 	padding:4%
 	}
 	
-#header_content{
+#header_content{ /*Inhaltscontainer "Header" > Abstand*/ 
 	width:100%;
 	height:0px;
 }
-#logo_mobil{
+#logo_mobil{ /*Logo für kleine Geräte (Tablet, Smartphone,..) > wird eingeblendet*/
 	display: block;
 }
 	
-#logo{
+#logo{ /*Logo für Desktop > wird ausgeblendet*/
 	display:none;
 }
 	
-#suchform{
+#suchform{ /*Suchformular*/
 	float:left;
 	width:80%;
 	height:50px;
@@ -252,7 +235,7 @@ a{
 	background-color:#111;
 }
 	
-#suchbegriff{
+#suchbegriff{ /*Suchformular*/
 	float:left;
 	width:80%;
 	height:35px;
@@ -263,7 +246,7 @@ a{
 	color:#000;
 }
 
-#suchen_button{
+#suchen_button{ /*Such Button für Suchformular*/
 	float:left;
 	width:41px;
 	height:41px;
@@ -275,7 +258,7 @@ a{
 	cursor: pointer;
 }
 
-    #nav
+    #nav /*Navigation (Dropdown)*/
     {
         position: relative;
 		width:50px;
@@ -287,12 +270,12 @@ a{
 		padding-right:0px;
     }
 	
-	.fa-bars:before{
+	.fa-bars:before{ /*Icon 3 Balken (Dropdown)*/
 		font-size: 30px;
     	margin-left: auto;
 		margin-right:auto;
 	}
-        #nav > a
+        #nav > a /*Navigation (Dropdown) >*/
         {
         }
         #nav:not( :target ) > a:first-of-type,
@@ -306,7 +289,7 @@ a{
 			top:0;
         }
  
-    #nav > ul
+    #nav > ul /*Navigation (Dropdown) > Unsortierte Liste*/
     {
         height: auto;
         display: none;
@@ -323,14 +306,14 @@ a{
 			margin-left:-100px;
 			text-align: center;
         }
-        #nav > ul > li
+        #nav > ul > li /*Navigation (Dropdown) > Unsortierte Liste > Listenpunkte*/
         {
             width: 100%;
             float: none;
 			height:50px;
 			line-height:50px;
         }
-	#nav a:hover{
+	#nav a:hover{ /*Navigation (Dropdown) > Links > Hover*/
 		
 	
 }
@@ -338,25 +321,25 @@ a{
 }
 
 @media (max-width: 480px) {
-	#header{
+#header{ /*Inhaltscontainer "Header"*/
 	width:92%;
 	height:150px;
 	padding:4%
 	}
 	
-#header_content{
+#header_content{ /*Inhaltscontainer "Header" > Abstand*/
 	width:100%;
 	height:0px;
 }
-#logo_mobil{
+#logo_mobil{ /*Logo für kleine Geräte (Tablet, Smartphone,..) > wird eingeblendet*/
 	display: block;
 }
 	
-#logo{
+#logo{ /*Logo für Desktop > wird ausgeblendet*/
 	display:none;
 }
 	
-#suchform{
+#suchform{ /*Suchformular*/
 	float:left;
 	width:70%;
 	height:50px;
@@ -365,7 +348,7 @@ a{
 	background-color:#111;
 }
 	
-#suchbegriff{
+#suchbegriff{ /*Suchformular*/
 	float:left;
 	width:60%;
 	height:35px;
@@ -376,7 +359,7 @@ a{
 	color:#000;
 }
 
-#suchen_button{
+#suchen_button{ /*Such Button für Suchformular*/
 	float:left;
 	width:41px;
 	height:41px;
@@ -388,7 +371,7 @@ a{
 	cursor: pointer;
 }
 
-    #nav
+    #nav /*Navigation (Dropdown)*/
     {
         position: relative;
 		width:50px;
@@ -400,12 +383,12 @@ a{
 		padding-right:0px;
     }
 	
-	.fa-bars:before{
+	.fa-bars:before{ /*Icon 3 Balken (Dropdown)*/
 		font-size: 30px;
     	margin-left: auto;
 		margin-right:auto;
 	}
-        #nav > a
+        #nav > a /*Navigation (Dropdown) > Links*/
         {
         }
         #nav:not( :target ) > a:first-of-type,
@@ -419,7 +402,7 @@ a{
 			top:0;
         }
  
-    #nav > ul
+    #nav > ul /*Navigation (Dropdown) > Unsortierte Liste */
     {
         height: auto;
         display: none;
@@ -436,277 +419,16 @@ a{
 			margin-left:-100px;
 			text-align: center;
         }
-        #nav > ul > li
+        #nav > ul > li /*Navigation (Dropdown) > Unsortierte Liste > Listenpunkte*/
         {
             width: 100%;
             float: none;
 			height:50px;
 			line-height:50px;
         }
-	#nav a:hover{
+	#nav a:hover{ /*Navigation (Dropdown) > Links > Hover*/
 		
 	
 }
 	
 }
-
-/*@media (min-width: 768px) and (max-width: 1024px) {
-	#header{
-		height:90px;
-	}
-
-	#header_content{
-		height:90px;
-	}
-	#logo{
-		height:90px;
-		margin-left:3.5%;
-		font-size:50px;
-		line-height:72px;
-	}
-
-	#suchform{
-		float:left;
-		width:50%;
-		height:90px;
-		margin-top:0px;
-		margin-left:7%;
-		background-color:#111;
-	}
-
-	#suchbegriff{
-		margin-top:25px;
-	}
-
-	#suchen_button{
-		margin-top:25px !important;
-	}
-
-	.navigation{
-		float:right;
-		width:10%;
-		height:40px;
-		margin-top:25px;
-		margin-right: 1.5%;
-		color:#FFF;
-		text-align: right;
-	}
-
-	.navigation ul {
-		list-style: none;
-		margin: 0;
-		padding: 0;
-	}
-
-	.navigation > ul > li {
-	}
-
-	.navigation > ul a {
-		display: block;
-		white-space: nowrap;
-		padding: 10px;
-		background: #111;
-	}
-
-	.navigation > ul {
-		float: right;
-		overflow: hidden;
-		padding: 0 10px 0 10px;
-		background: #111;
-		text-align: left;
-	}
-
-	.navigation > ul > li {
-		display: none;
-		color:#FFF;
-	}
-
-	.navigation > ul:hover li {
-		display: block;
-	}
-
-	.navigation > ul::before {
-		display: block;
-		content: "MENÜ";
-		padding: 10px;
-		text-align: right !important;
-	}
-}
-
-	
-	
-@media (min-width: 480px) and (max-width: 768px) {
-#header{
-		height:90px;
-	}
-	
-#logo_mobil{
-		display:block;
-	}
-
-#header_content{
-		height:90px;
-	}
-#logo{
-		height:90px;
-		margin-left:3.5%;
-		font-size:50px;
-		line-height:72px;
-	display:none;
-	}
-
-#suchform{
-		width:59%;
-		height:90px;
-		margin-left: 1%;
-	}
-
-
-	#suchbegriff{
-		margin-top:25px;
-		margin-left:10px;
-	}
-
-	#suchen_button{
-		margin-top:25px !important;
-	}
-
-	.navigation{
-		float:right;
-		width:10%;
-		height:40px;
-		margin-top:25px;
-		margin-right: 1.5%;
-		color:#FFF;
-		text-align: right;
-	}
-
-	.navigation ul {
-		list-style: none;
-		margin: 0;
-		padding: 0;
-	}
-
-	.navigation > ul > li {
-	}
-
-	.navigation > ul a {
-		display: block;
-		white-space: nowrap;
-		padding: 10px;
-		background: #111;
-	}
-
-	.navigation > ul {
-		float: right;
-		overflow: hidden;
-		padding: 0 10px 0 10px;
-		background: #111;
-		text-align: left;
-	}
-
-	.navigation > ul > li {
-		display: none;
-		color:#FFF;
-	}
-
-	.navigation > ul:hover li {
-		display: block;
-	}
-
-	.navigation > ul::before {
-		display: block;
-		content: "MENÜ";
-		padding: 10px;
-		text-align: right !important;
-	}
-}
-	
-@media (max-width: 480px) {
-#header{
-		height:90px;
-	}
-
-#logo_mobil{
-		display:block;
-	}
-	
-	#header_content{
-		height:90px;
-	}
-	#logo{
-		height:90px;
-		margin-left:3.5%;
-		font-size:50px;
-		line-height:72px;
-		display:none;
-	}
-
-	#suchform{
-		float:left;
-		width:59%;
-		height:90px;
-		margin-top:0px;
-		margin-left:1%;
-		background-color:#111;
-	}
-
-	#suchbegriff{
-		margin-top:25px;
-		margin-left:10px;
-	}
-
-	#suchen_button{
-		margin-top:25px !important;
-	}
-
-	.navigation{
-		float:right;
-		width:10%;
-		height:40px;
-		margin-top:25px;
-		margin-right: 1.5%;
-		color:#FFF;
-		text-align: right;
-	}
-
-	.navigation ul {
-		list-style: none;
-		margin: 0;
-		padding: 0;
-	}
-
-	.navigation > ul > li {
-	}
-
-	.navigation > ul a {
-		display: block;
-		white-space: nowrap;
-		padding: 10px;
-		background: #111;
-	}
-
-	.navigation > ul {
-		float: right;
-		overflow: hidden;
-		padding: 0 10px 0 10px;
-		background: #111;
-		text-align: left;
-	}
-
-	.navigation > ul > li {
-		display: none;
-		color:#FFF;
-	}
-
-	.navigation > ul:hover li {
-		display: block;
-	}
-
-	.navigation > ul::before {
-		display: block;
-		content: "MENÜ";
-		padding: 10px;
-		text-align: right !important;
-	}
-}*/

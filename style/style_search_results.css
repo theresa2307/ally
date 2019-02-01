@@ -1,10 +1,10 @@
-.content_box{
+.content_box{ /*Inhaltscontainer "Content" > enthält alle nachfolgenden Klassen*/
 	width:100%;
 	height:auto;
 	max-width:1200px;
 }
 
-.search_results_header{
+.search_results_header{ /*Inhaltscontainer "Header" > enthält den Titel*/
 	width:100%;
 	height:64px !important;
 	margin-top:1%;
@@ -15,7 +15,7 @@
 	float:left;
 }
 
-.search_results_header_title{
+.search_results_header_title{ /*Titel der Suchergebnisse*/
 	width:30%;
 	height:64px;
 	margin-left: 20px;
@@ -24,7 +24,7 @@
 	float:left;
 }
 
-.search_results_body{
+.search_results_body{ /*Inhaltscontainer "Body" > enthält Profilbild und Username der angezeigten Suchergenisse*/
 	width:29.3333333333333%;
 	height:auto;
 	background:#FFF;
@@ -32,12 +32,12 @@
 	float:left;
 }
 
-.search_results_body_pic > img{
+.search_results_body_pic > img{ /*Profilbild des gesuchten Accounts*/
 	border-radius:100%;
 	float:left;
 }
 
-.search_results_body_username{
+.search_results_body_username{ /* Username des gesuchten Accounts*/
 	width:40%;
 	height:86px;
 	margin-left:20px;
@@ -48,8 +48,8 @@
 	float:left;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
-.content_box{
+@media (min-width: 768px) and (max-width: 1024px) { /*Media Querie für Gerätebreiten von 768px bis 1024px*/
+.content_box{ /*Inhaltscontainer "Content" > enthält alle nachfolgenden Klassen*/
 	width:97%;
 	padding:1.5%;
 }
@@ -63,32 +63,32 @@
 }
 }
 
-@media (min-width: 480px) and (max-width: 768px) {
-.content_box{
+@media (min-width: 480px) and (max-width: 768px) { /*Media Querie für Gerätebreiten von 480px bis 768px*/
+.content_box{ /*Inhaltscontainer "Content" > enthält alle nachfolgenden Klassen*/
 	width:97%;
 	padding:1.5%;
 }
 
-.search_results_header{
+.search_results_header{ /*Inhaltscontainer "Header" > enthält den Titel*/
 	margin-top:0px;
 }
-	
-.search_results_body{
+	 
+.search_results_body{ /*Inhaltscontainer "Body" > enthält Profilbild und Username der angezeigten Suchergenisse*/
 	width:46%;
 }
 }
 
-@media (max-width: 480px) {
-.content_box{
+@media (max-width: 480px) { /*Media Querie für Gerätebreiten bis 480px*/
+.content_box{ /*Inhaltscontainer "Content" > enthält alle nachfolgenden Klassen*/
 	width:97%;
 	padding:1.5%;
 }
 
-.search_results_header{
+.search_results_header{ /*Inhaltscontainer "Header" > enthält den Titel*/
 	margin-top:0px;
 }
 	
-.search_results_body{
+.search_results_body{ /*Inhaltscontainer "Body" > enthält Profilbild und Username der angezeigten Suchergenisse*/
 	width:96%;
 }
 }
