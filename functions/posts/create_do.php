@@ -7,12 +7,12 @@ $username =$_POST[".$new_path."];
 $logged_user = htmlspecialchars($_SESSION['username']);
 $post = htmlspecialchars($_POST['post']);
 $posttitle = htmlspecialchars($_POST['posttitle']);
-$date = date("Y-m-d H:i:sa");
+$date = date("Y-m-d H:i:sa"); //datum wird erfasst, ermittelt die serverzeit und wird in db hochgeladen
 
 
 $upload_folder = 'uploads/files/'; //Das Upload-Verzeichnis
-$filename = pathinfo($_FILES['datei']['name'], PATHINFO_FILENAME);
-$extension = strtolower(pathinfo($_FILES['datei']['name'], PATHINFO_EXTENSION));
+$filename = pathinfo($_FILES['datei']['name'], PATHINFO_FILENAME); //Dateiname
+$extension = strtolower(pathinfo($_FILES['datei']['name'], PATHINFO_EXTENSION)); //dass alles klein geschrieben ist
  
  
 //Überprüfung der Dateiendung
@@ -47,9 +47,9 @@ $new_path = $upload_folder.$filename.'.'.$extension;
 $db_path= $filename.'.'.$extension;
 
 if (isset($filename)) { //die schleife schaut, ob ein bild hochgeladen wird, wenn ja dann 1. befehl. datei wird hochgeladen
-$statement = $pdo->prepare("INSERT INTO posts (datei, username, datum, text, titel) VALUES (:db_path, :username, :date, :post, :title)"); //SQL Befehl
+$statement = $pdo->prepare("INSERT INTO posts (datei, username, datum, text, titel) VALUES (:db_path, :username, :date, :post, :title)"); //SQL Befehl, datum wird eingefügt
 
-$statement->bindParam(':db_path', $db_path);
+$statement->bindParam(':db_path', $db_path); //bindparam verbindet platzhalter mit dem array mit :, nachträglich eingefügt
 $statement->bindParam(':username', $logged_user);
 $statement->bindParam(':date', $date);
 $statement->bindParam(':post', $post);

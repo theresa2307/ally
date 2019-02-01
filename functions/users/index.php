@@ -1,5 +1,5 @@
 <?php
-switch ($_GET["action"]){
+switch ($_GET["action"]){ //wenn action = login ist macht es das...
     case"login":
         include"./functions/users/login_form.php";
         break;

@@ -22,7 +22,7 @@ $logged_user = $_SESSION['username'];
 <div id="header">
 	<div id="logo_mobil">ally</div>
     <div id="header_content">
-        <div id="logo">ally</div>
+        <a href="index.php"><div id="logo">ally</div></a>
 		<div id="suchform">
 			<?php
 			if (isset($logged_user)) {

@@ -14,6 +14,7 @@
 	border-left: 1px solid #999;
 	border-right: 1px solid #999;
 	border-top: 1px solid #999;
+	box-sizing: border-box;
 	float:left;
 }
 
@@ -69,14 +70,16 @@
 	border-left: 1px solid #999;
 	border-right: 1px solid #999;
 	border-bottom: 1px solid #999;
+	box-sizing: border-box;
 	float:left;
 }
 
 .profil_body_pic{ /*Profilbild auf der Profilseite*/
 	width:250px;
 	height:250px;
-	margin-left:20px;
-	margin-top:20px;
+	margin-left:2%;
+	margin-top:2%;
+	margin-bottom:2%;
 	float:left;
 }
 
@@ -88,9 +91,9 @@
 .profil_body_text{ /*Text auf der Profilseite*/
 	width:45%;
 	height:auto;
-	margin-left:20px;
-	margin-top:20px;
-	margin-bottom:20px;
+	margin-left:2%;
+	margin-top:2%;
+	margin-bottom:2%;
 	float:left;
 }
 
@@ -109,9 +112,6 @@
 .profil_body_text{ /*Text auf der Profilseite*/
 	width:45%;
 	height:auto;
-	margin-left:20px;
-	margin-top:20px;
-	margin-bottom:20px;
 	float:left;
 }
 }

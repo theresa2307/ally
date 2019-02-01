@@ -1,6 +1,6 @@
 <?php
 include('../../database.php');
-$db=new PDO ($host, $user, $password);
+$db=new PDO ($host, $user, $password); //stellt die DBVerbindung her
 $error = false;
 $username = htmlspecialchars($_POST['username']); // htmlspecialchars spezielle Zeichen werden verwandelt
 $email = htmlspecialchars($_POST['email']);
@@ -26,7 +26,7 @@ if(!$error) { //if-schleife -> wenn keine fehlermeldung kam, also error nicht tr
 }
 if(!$error) { // keine fehlermeldung, läd den user hoch in die user- db
     $password_hash = password_hash($userpass, PASSWORD_DEFAULT);
-    $statement = $db->prepare("INSERT INTO users (username, password, email) VALUES (:username, :password, :email)");
+    $statement = $db->prepare("INSERT INTO users (username, password, email) VALUES (:username, :password, :email)"); //username,passwort und email wird in die db tabelle eingefügt
     $result = $statement->execute(array('username' => $username, 'password' => $password_hash, 'email' => $email));
     $statement = $db->prepare("INSERT INTO profiles (username) VALUES (:username)"); // profil wird erstellt/vorbereitet -> prepare
     $result = $statement->execute(array('username' => $username)); //execute-> befehl wird ausgeführt

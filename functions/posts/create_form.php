@@ -13,10 +13,12 @@
 				<div class="post_form_header_title"><h2>Neuen Beitrag verfassen</h2></div>
 			</div>
 			<div class="post_form_body">
-				<input class="post_form_body_title" type="text" placeholder="Titel" name="posttitle" required></br>
-				<textarea class="post_form_body_text" name='post' placeholder='Was willst du posten?' rows='10' required></textarea></br>
-				<input class="post_form_body_upload" type="file" name="datei"></p>
-				<input class="post_form_body_posten" type="submit" value="posten"></p>
+				<div class="post_form_body_padding">
+					<input class="post_form_body_title" type="text" placeholder="Titel" name="posttitle" required></br>
+					<textarea class="post_form_body_text" name='post' placeholder='Was willst du posten?' rows='10' required></textarea></br>
+					<input class="post_form_body_upload" type="file" name="datei"></p>
+					<input class="post_form_body_posten" type="submit" value="posten"></p>
+				</div>
 			</div>
 		</form>
 		<?php

@@ -2,6 +2,7 @@
 	width:100%;
 	height:auto;
 	max-width:1200px;
+	
 }
 
 .profil_form_header{
@@ -26,6 +27,7 @@
 	float:left;
 }
 
+
 .profil_form_body{
 	width:98%;
 	height:auto;
@@ -39,52 +41,54 @@
 	float:left;
 }
 
-.profil_form_body_username{
+
+.profil_form_body_padding{
 	width:96%;
+	height: auto;
+	padding:2%;
+}
+
+.profil_form_body_username{
+	width:100%;;
 	max-width:1158px;
 	height:35px;
-	margin-left:20px;
-	margin-right:20px;;
-	margin-top:10px;
 	padding-left:7px;
 	font-family: 'Montserrat', sans-serif;
 	font-size:14px;
+	box-sizing: border-box;
 	float:left;
 }
 
 .profil_form_body_bio{
-	width:95.8%;
-	max-width:1156px;
+	width:100%;
+	max-width:1129px;
 	height:100px;
-	max-height:100px;
-	margin-left:20px;
-	margin-right:20px;
-	margin-top:10px;
+	max-height:200px;
+	margin-top: 1%;
 	padding-left:7px;
 	padding-top:7px;
 	font-family: 'Montserrat', sans-serif;
 	font-size:14px;
+	box-sizing: border-box;
 	float:left;
 }
 
 .profil_form_body_upload{
 	width:100%;
-	height:35px;
-	margin-left: 20px;
-	margin-top: 10px;
-	margin-right:20px;
+	height:23px;
+	margin-top: 1%;
 	font-family: 'Montserrat', sans-serif;
 	font-size:14px;
 	float:left;
+
 }
 
 .profil_form_body_speichern{
 	width:20%;
 	min-width:200px;
 	height:35px;
-	margin-left: 20px;
-	margin-top: 10px;
-	margin-bottom:20px;
+	margin-top: 1%;
+	margin-bottom: 2%;
 	font-family: 'Montserrat', sans-serif;
 	font-size:14px;
 	cursor: pointer;

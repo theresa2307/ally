@@ -21,6 +21,7 @@
 				</div>
 			</div>
 			<div class="profil_form_body">
+				<div class="profil_form_body_padding">
 				<?php
 						echo "<input class='profil_form_body_username' type='text' name='full_name' placeholder='Username' value='$zeile->name'/>"; //wird aus der db ausgelesen
 						echo "<textarea class='profil_form_body_bio' name='bio' placeholder='Über mich' rows='10'>$zeile->bio</textarea>";
@@ -29,6 +30,7 @@
 						echo "</form>";
 					}
 				?>
+				</div>
 			</div>
 	</div>
 </body>
