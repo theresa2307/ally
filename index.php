@@ -46,7 +46,7 @@ $logged_user = $_SESSION['username'];
 						<a href="#" title="Hide Menu"><i class="fas fa-bars"></i></a>
 						<ul>
 							<?php
-								if (isset($logged_user)) {
+								if (isset($logged_user)) { //Navigation angezeigt, wenn Nutzer eingeloggt
 									echo "<li><a href='?page=users&action=logout'><i class=\"fas fa-sign-out-alt\"></i> Logout</a></li>";
 									echo "<li><a href='?page=posts&action=create' aria-haspopup='true'><i class=\"fas fa-plus\"></i> Neuer Beitrag</a></li>";
 									echo "<li><a href='?page=profile&user=$logged_user' aria-haspopup='true'><i class=\"fas fa-user\"></i> Mein Profil</a></li>";
@@ -76,7 +76,7 @@ $logged_user = $_SESSION['username'];
         }
     }
 	else {
-        switch ($_GET["page"]){
+        switch ($_GET["page"]){ //schaut welchen wert "page" hat, je nachdem wird entsprechende datei(users,posts...) eingefügt
             case"users":
                 include "./functions/users/index.php";
                 break;
@@ -86,10 +86,10 @@ $logged_user = $_SESSION['username'];
             case"profile":
                 include "./functions/profil/index.php";
                 break;
-            case"search": //suche
+            case"search":
                 include "./functions/posts/search_do.php";
                 break;
-            default:
+            default: //wenn keinen wert hat, dann wird view ausgeführt
                 include"./functions/posts/view.php";
         }
     }

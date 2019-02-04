@@ -1,6 +1,6 @@
 <?php
 include('../../database.php');
-$db=new PDO ($host, $user, $password); //stellt die DBVerbindung her
+$db=new PDO ($host, $user, $password); //stellt die db-Verbindung her
 $error = false;
 $username = htmlspecialchars($_POST['username']); // htmlspecialchars spezielle Zeichen werden verwandelt
 $email = htmlspecialchars($_POST['email']);
@@ -15,10 +15,10 @@ if($userpass !== $userpass2) { // != -> nicht gleich, == soll überprüfen, ob s
     $error = true;
     echo "Passwörter stimmen nicht überein";
 }
-if(!$error) { //if-schleife -> wenn keine fehlermeldung kam, also error nicht true dann -> überprüft ob username schon existiert
+if(!$error) { //if-schleife -> wenn keine fehlermeldung kam, also error nicht true -> dann überprüft ob username schon existiert
     $statement = $db->prepare("SELECT * FROM users WHERE username = :username");
-    $result = $statement->execute(array('username' => $username));
-    $userdb = $statement->fetch();
+    $result = $statement->execute(array('username' => $username)); // sql befehl wird ausgeführt
+    $userdb = $statement->fetch(); //fetch-> ist das ergebnis
     if($userdb !== false) { //fehlermeldung username vergeben
         $error = true;
         echo "Username bereits vergeben";

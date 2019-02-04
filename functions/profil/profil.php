@@ -5,7 +5,7 @@
 <body>
 <div class="content_box">
     <?php
-    $get_user = $_GET['user']; //user=username wird übernommen und in eine variable gespeichert, get-user -> profil auf dem man grrade ist
+    $get_user = $_GET['user']; //user=username wird übernommen und in eine variable gespeichert, get-user -> profil auf dem man gerade ist
     include ('database.php');
     $db = new PDO($host, $user, $password);
 

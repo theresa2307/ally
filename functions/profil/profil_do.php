@@ -47,7 +47,7 @@ if (!isset($filename)) { // profilbild
         $id = 1;
         do {
             $new_path = $upload_folder . $filename . '_' . $id . '.' . $extension;
-            $id++; //zahl wird um eisn erhöht
+            $id++; //zahl wird um eins erhöht
         } while (file_exists($new_path));
     }
 

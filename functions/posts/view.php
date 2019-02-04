@@ -11,7 +11,7 @@
 		$follower_array = array(); //macht ein array auf
 		$query_follow = $pdo->prepare( "SELECT * FROM follower WHERE username= :username" ); //db-verbindung, query -> abfrage
 		$query_follow->execute( array( 'username' => $logged_user ) ); //liest alles aus der follower-db aus
-		while ( $follower_dump = $query_follow->fetch( PDO::FETCH_ASSOC ) // alle ausgaben aus der db wird im array gespeichert
+		while ( $follower_dump = $query_follow->fetch( PDO::FETCH_ASSOC ) // alle Ausgaben aus der db wird im array gespeichert
 		) {
 			array_push( $follower_array, $follower_dump[ 'follows' ] ); // wird dem follow_array hinzugefügt, follower_dump -> sind alle db-ausgaben drin, also alle follower
 		}
