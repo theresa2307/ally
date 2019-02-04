@@ -561,7 +561,7 @@ label {
 		border: none;
 	}
 
-	input { /* */
+	input { /*dafür da, dass inputfelder keine anderen styles von browsern übernehmen*/
 		webkit-appearance: none;
 		moz-appearance: none;
 		appearance: none;

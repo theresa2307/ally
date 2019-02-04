@@ -16,7 +16,7 @@ $extension = strtolower(pathinfo($_FILES['datei']['name'], PATHINFO_EXTENSION));
  
  
 //Überprüfung der Dateiendung
-$allowed_extensions = array('png', 'jpg', 'jpeg', 'gif'); // wenn es nicht im array drin ist, also keine der endung entspricht, bricht es ab -> die
+$allowed_extensions = array('png', 'jpg', 'jpeg', 'gif'); // wenn es nicht im array drin ist, also keine der Endung entspricht, bricht es ab -> die
 if (!isset($filename)) {
 	if(!in_array($extension, $allowed_extensions)) {
 	 die("Ungültige Dateiendung. Nur png, jpg, jpeg und gif-Dateien sind erlaubt");
@@ -31,7 +31,7 @@ if($_FILES['datei']['size'] > $max_size) {
 }
 }
 
-//Überprüfung dass das Bild keine Fehler enthält
+//Überprüfung, dass das Bild keine Fehler enthält
 if (!isset($filename)) {
 if(function_exists('exif_imagetype')) { //exif_imagetype erfordert die exif-Erweiterung
  $allowed_types = array(IMAGETYPE_PNG, IMAGETYPE_JPEG, IMAGETYPE_GIF);
@@ -65,18 +65,17 @@ $statement->bindParam(':title', $posttitle);
 $statement->execute();
 }
 
-if(!isset($filename)){
-//Neuer Dateiname falls die Datei bereits existiert
+if(!isset($filename)){ //Neuer Dateiname falls die Datei bereits existiert
 if(file_exists($new_path)) { //Falls Datei existiert, hänge eine Zahl an den Dateinamen
  $id = 1;
  do {
- $new_path = $upload_folder.$filename.'_'.$id.'.'.$extension;
+ $new_path = $upload_folder.$filename.'_'.$id.'.'.$extension; //fügt _ oder . dem dateinamen hinzu
  $id++;
  } while(file_exists($new_path));
 }
 }
 //Alles okay, verschiebe Datei an neuen Pfad
-move_uploaded_file($_FILES ['datei']['tmp_name'], $new_path);
+move_uploaded_file($_FILES ['datei']['tmp_name'], $new_path); //tmp_name -> temporärer Name
 echo 'Bild erfolgreich hochgeladen: <a href="'.$new_path.'">'.$new_path.'</a>';
 function generateRandomString($length = 10) {
     $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
