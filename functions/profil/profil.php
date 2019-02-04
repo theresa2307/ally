@@ -9,10 +9,6 @@
     include ('database.php');
     $db = new PDO($host, $user, $password);
 
-    /*if ($logged_user == $get_user) { //logged_user-> eingeloggte user
-        echo "<div id='profil_bearbeiten'><a href='?page=profile&action=edit'>Profil bearbeiten</a></div>"; //wenn dem so ist, dann kann man das profil bearbeiten (sein eigenes)
-    }*/
-
     $sql_follow = "SELECT * FROM follower WHERE username = '".$logged_user."' AND follows = '".$get_user."'"; // zieht sich information aus db
     $statement_follow = $db->prepare($sql_follow);
     $statement_follow->execute();

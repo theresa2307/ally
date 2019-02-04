@@ -561,7 +561,7 @@ label {
 		border: none;
 	}
 
-	input {
+	input { /* */
 		webkit-appearance: none;
 		moz-appearance: none;
 		appearance: none;
